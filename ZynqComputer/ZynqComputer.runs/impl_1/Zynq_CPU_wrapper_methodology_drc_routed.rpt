@@ -1,0 +1,175 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Sat Oct 23 11:34:57 2021
+| Host         : DESKTOP-R7BDQNG running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Zynq_CPU_wrapper_methodology_drc_routed.rpt -pb Zynq_CPU_wrapper_methodology_drc_routed.pb -rpx Zynq_CPU_wrapper_methodology_drc_routed.rpx
+| Design       : Zynq_CPU_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 28
++-----------+----------+-----------------------+------------+
+| Rule      | Severity | Description           | Violations |
++-----------+----------+-----------------------+------------+
+| TIMING-16 | Warning  | Large setup violation | 28         |
++-----------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.527 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -11.946 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -14.006 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -16.372 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -18.715 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -20.920 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -23.222 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -24.179 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -24.291 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -24.291 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -24.310 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -24.630 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -24.646 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -24.688 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -25.047 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -25.056 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -25.138 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -25.418 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -25.457 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -25.737 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -25.771 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -25.780 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -25.884 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -25.924 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/remainderReg_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -3.627 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -5.576 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -7.848 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -9.847 ns between Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C (clocked by clk_fpga_0) and Zynq_CPU_i/rtl_divider_0/inst/rtl_divider_v1_0_S00_AXI_inst/rtl_divider_instance_01/quotientReg_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

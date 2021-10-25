@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# xsim v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Fri Oct  8 12:43:32 2021
+# Process ID: 11000
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_multiplier/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/hls_multiplier/xsim_script.tcl}
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_multiplier/solution1/sim/verilog/xsim.log
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_multiplier/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/hls_multiplier/xsim_script.tcl
+# xsim {hls_multiplier} -autoloadwcfg -tclbatch {hls_multiplier.tcl}
+Time resolution is 1 ps
+source hls_multiplier.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "605000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 665 ns : File "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_multiplier/solution1/sim/verilog/hls_multiplier.autotb.v" Line 306
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  8 12:43:37 2021...

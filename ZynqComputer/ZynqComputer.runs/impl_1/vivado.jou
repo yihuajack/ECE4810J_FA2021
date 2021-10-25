@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Sat Oct 23 11:32:51 2021
+# Process ID: 10196
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/impl_1
+# Command line: vivado.exe -log Zynq_CPU_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Zynq_CPU_wrapper.tcl -notrace
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/impl_1/Zynq_CPU_wrapper.vdi
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Zynq_CPU_wrapper.tcl -notrace

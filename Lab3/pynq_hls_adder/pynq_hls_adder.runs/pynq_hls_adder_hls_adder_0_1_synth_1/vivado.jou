@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Sun Oct 24 12:46:04 2021
+# Process ID: 26032
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab3/pynq_hls_adder/pynq_hls_adder.runs/pynq_hls_adder_hls_adder_0_1_synth_1
+# Command line: vivado.exe -log pynq_hls_adder_hls_adder_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynq_hls_adder_hls_adder_0_1.tcl
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab3/pynq_hls_adder/pynq_hls_adder.runs/pynq_hls_adder_hls_adder_0_1_synth_1/pynq_hls_adder_hls_adder_0_1.vds
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab3/pynq_hls_adder/pynq_hls_adder.runs/pynq_hls_adder_hls_adder_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source pynq_hls_adder_hls_adder_0_1.tcl -notrace

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1634831699219">
+  <ports id="1" name="a" type="PortType" originalName="a" coreId="1702129263" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" originalName="b" coreId="0" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="20" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="22" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="23" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="24" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="25" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.2"/>
+  <blocks id="17" name="hls_divider" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="b_read" lineNumber="1" originalName="b" fileName="hls_divider.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="114" contextFuncName="hls_divider" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_divider.cpp" linenumber="1" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab2" functionName="hls_divider"/>
+      <dataInputObjs>b</dataInputObjs>
+      <dataOutputObjs>udiv</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="a_read" lineNumber="1" originalName="a" fileName="hls_divider.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="114" contextFuncName="hls_divider" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_divider.cpp" linenumber="1" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab2" functionName="hls_divider"/>
+      <dataInputObjs>a</dataInputObjs>
+      <dataOutputObjs>udiv</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="q" lineNumber="6" originalName="q" fileName="hls_divider.cpp" fileDirectory=".." rtlName="udiv_16ns_16ns_16_20_seq_1_U1" coreName="DivnS_SEQ" implIndex="auto_seq" control="no" opType="udiv" coreId="7" contextFuncName="hls_divider" bitwidth="16" opcode="udiv" nodeLatency="19" m_display="0" m_delay="3.64" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_divider.cpp" linenumber="6" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab2" functionName="hls_divider"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="zext_ln6" lineNumber="6" fileName="hls_divider.cpp" fileDirectory=".." rtlName="ap_return" coreId="1279811443" contextFuncName="hls_divider" bitwidth="32" opcode="zext" nodeLabel="19.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_divider.cpp" linenumber="6" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab2" functionName="hls_divider"/>
+      <dataInputObjs>udiv</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln7" lineNumber="7" fileName="hls_divider.cpp" fileDirectory=".." coreId="3822362992" contextFuncName="hls_divider" opcode="ret" nodeLabel="19.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_divider.cpp" linenumber="7" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab2" functionName="hls_divider"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="hls_divider.cpp">
+      <validLinenumbers>1</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <regnodes realName="b_read_reg_52">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="a_read_reg_57">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln6_fu_48">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_42">
+    <nodeIds>14</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="a_read_read_fu_36">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_read_read_fu_30">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioPorts name="a">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="20" latency="20"/>
+    </states>
+    <states id="2">
+      <operations id="14" stage="19" latency="20"/>
+    </states>
+    <states id="3">
+      <operations id="14" stage="18" latency="20"/>
+    </states>
+    <states id="4">
+      <operations id="14" stage="17" latency="20"/>
+    </states>
+    <states id="5">
+      <operations id="14" stage="16" latency="20"/>
+    </states>
+    <states id="6">
+      <operations id="14" stage="15" latency="20"/>
+    </states>
+    <states id="7">
+      <operations id="14" stage="14" latency="20"/>
+    </states>
+    <states id="8">
+      <operations id="14" stage="13" latency="20"/>
+    </states>
+    <states id="9">
+      <operations id="14" stage="12" latency="20"/>
+    </states>
+    <states id="10">
+      <operations id="14" stage="11" latency="20"/>
+    </states>
+    <states id="11">
+      <operations id="14" stage="10" latency="20"/>
+    </states>
+    <states id="12">
+      <operations id="14" stage="9" latency="20"/>
+    </states>
+    <states id="13">
+      <operations id="14" stage="8" latency="20"/>
+    </states>
+    <states id="14">
+      <operations id="14" stage="7" latency="20"/>
+    </states>
+    <states id="15">
+      <operations id="14" stage="6" latency="20"/>
+    </states>
+    <states id="16">
+      <operations id="14" stage="5" latency="20"/>
+    </states>
+    <states id="17">
+      <operations id="14" stage="4" latency="20"/>
+    </states>
+    <states id="18">
+      <operations id="14" stage="3" latency="20"/>
+    </states>
+    <states id="19">
+      <operations id="14" stage="2" latency="20"/>
+    </states>
+    <states id="20">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="20"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="hls_divider" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="19" mMaxLatency="19">
+      <basicBlocks>17</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

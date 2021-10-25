@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [HLS 200-101] 'export_design': Unknown option 'Design/Lab2_misc/hls_divider.zip'.&#xD;&#xA;SYNTAX &#xD;&#xA;  export_design [OPTIONS]&#xD;&#xA;    -description &lt;string> &#xD;&#xA;    -display_name &lt;string> &#xD;&#xA;    -flow &lt;syn | impl>&#xD;&#xA;    -format &lt;xo | syn_dcp | sysgen | *ip_catalog*>&#xD;&#xA;    -ipname &lt;string> &#xD;&#xA;    -library &lt;string> &#xD;&#xA;    -output &lt;string> &#xD;&#xA;    -rtl &lt;vhdl | *verilog*>&#xD;&#xA;    -taxonomy &lt;string> &#xD;&#xA;    -vendor &lt;string> &#xD;&#xA;    -version &lt;string> &#xD;&#xA;&#xD;&#xA;SEE ALSO&#xD;&#xA;  www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=vitis+doc;d=rpg1583259720879.html&#xD;&#xA;" projectName="hls_divider" solutionName="solution1" date="2021-10-21T23:59:01.886+0800"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="hls_divider" solutionName="solution1" date="2021-10-21T23:54:58.912+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5528] Ignore interface attribute or pragma which is not used in top function: hls_divider.cpp:4:9" projectName="hls_divider" solutionName="solution1" date="2021-10-21T23:54:52.910+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

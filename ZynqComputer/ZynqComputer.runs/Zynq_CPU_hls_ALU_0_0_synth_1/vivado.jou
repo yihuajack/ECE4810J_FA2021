@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Sat Oct 23 11:31:02 2021
+# Process ID: 23164
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_ALU_0_0_synth_1
+# Command line: vivado.exe -log Zynq_CPU_hls_ALU_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_CPU_hls_ALU_0_0.tcl
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_ALU_0_0_synth_1/Zynq_CPU_hls_ALU_0_0.vds
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_ALU_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Zynq_CPU_hls_ALU_0_0.tcl -notrace

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op udiv" ID="" IMPL="auto_seq" LATENCY="19" OPTYPE="udiv" PRAGMA="" RTLNAME="udiv_16ns_16ns_16_20_seq_1_U1" SOURCE="hls_divider.cpp:6" VARIABLE="q" MODULE="hls_divider" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

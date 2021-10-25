@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:/Documents/GitHub/ECE4810J_FA2021/Lab2/Zynq_CPU_wrapper_hw_platform_3/export/Zynq_CPU_wrapper_hw_platform_3/sw/Zynq_CPU_wrapper_hw_platform_3/boot/fsbl.elf
+	D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hello_hls_rtl_m/_ide/bitstream/Zynq_CPU_wrapper_hw_platform_3.bit
+	D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hello_hls_rtl_m/Debug/hello_hls_rtl_m.elf
+}

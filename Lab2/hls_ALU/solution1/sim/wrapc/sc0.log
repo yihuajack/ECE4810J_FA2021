@@ -1,0 +1,6 @@
+   Build using "F:/Xilinx/Vitis_HLS/2021.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling test_hls_ALU.cpp_pre.cpp.tb.cpp
+   Compiling hls_ALU.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hls_ALU.cpp
+   Compiling apatb_hls_ALU_ir.ll
+   Generating cosim.tv.exe

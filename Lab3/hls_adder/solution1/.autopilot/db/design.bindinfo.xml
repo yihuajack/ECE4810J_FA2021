@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="c" SOURCE="hls_adder.cpp:7" VARIABLE="add_ln7" MODULE="hls_adder" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

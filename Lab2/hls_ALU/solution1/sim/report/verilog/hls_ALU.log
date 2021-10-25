@@ -1,0 +1,97 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "F:/Xilinx/Vitis_HLS/2021.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling test_hls_ALU.cpp_pre.cpp.tb.cpp
+   Compiling hls_ALU.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hls_ALU.cpp
+   Compiling apatb_hls_ALU_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+initialized variables: a=6, b=3, c=3, r=0 
+testing hls_ALU: 6 / 3 = 2 
+
+D:\Documents\GitHub\ECE4810J_FA2021\Lab2\hls_ALU\solution1\sim\verilog>set PATH= 
+
+D:\Documents\GitHub\ECE4810J_FA2021\Lab2\hls_ALU\solution1\sim\verilog>call F:/Xilinx/Vivado/2021.1/bin/xelab xil_defaultlib.apatb_hls_ALU_top glbl -Oenable_linking_all_libraries  -prj hls_ALU.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib "ieee_proposed=./ieee_proposed" -s hls_ALU  
+Vivado Simulator v2021.1.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_hls_ALU_top glbl -Oenable_linking_all_libraries -prj hls_ALU.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s hls_ALU 
+Multi-threading is on. Using 4 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/AESL_axi_slave_CRTLS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CRTLS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_hls_ALU_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU_CRTLS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_ALU_CRTLS_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU_mul_mul_16ns_16ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_ALU_mul_mul_16ns_16ns_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module hls_ALU_mul_mul_16ns_16ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU_udiv_16ns_16ns_16_20_seq_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hls_ALU_udiv_16ns_16ns_16_20_seq_1_divseq
+INFO: [VRFC 10-311] analyzing module hls_ALU_udiv_16ns_16ns_16_20_seq_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.hls_ALU_CRTLS_s_axi
+Compiling module xil_defaultlib.hls_ALU_udiv_16ns_16ns_16_20_seq...
+Compiling module xil_defaultlib.hls_ALU_udiv_16ns_16ns_16_20_seq...
+Compiling module xil_defaultlib.hls_ALU_mul_mul_16ns_16ns_32_4_1...
+Compiling module xil_defaultlib.hls_ALU_mul_mul_16ns_16ns_32_4_1...
+Compiling module xil_defaultlib.hls_ALU
+Compiling module xil_defaultlib.AESL_axi_slave_CRTLS
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_hls_ALU_top
+Compiling module work.glbl
+Built simulation snapshot hls_ALU
+
+****** Webtalk v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/xsim.dir/hls_ALU/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 23 11:26:12 2021...
+
+****** xsim v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/hls_ALU/xsim_script.tcl
+# xsim {hls_ALU} -autoloadwcfg -tclbatch {hls_ALU.tcl}
+Time resolution is 1 ps
+source hls_ALU.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "885000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 945 ns : File "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU.autotb.v" Line 311
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 23 11:26:19 2021...
+initialized variables: a=6, b=3, c=3, r=0 
+testing hls_ALU: 6 / 3 = 2 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

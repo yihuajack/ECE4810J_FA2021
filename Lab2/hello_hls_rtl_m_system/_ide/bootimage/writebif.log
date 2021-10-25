@@ -1,0 +1,9 @@
+TRACE::2021-10-23.17:46:37::SCWBifWriter::Found the complete platform D:/Documents/GitHub/ECE4810J_FA2021/Lab2/Zynq_CPU_wrapper_hw_platform_3/export/Zynq_CPU_wrapper_hw_platform_3/Zynq_CPU_wrapper_hw_platform_3.xpfm
+TRACE::2021-10-23.17:46:37::SCWBifWriter::hardware databse : Zynq_CPU_wrapper_3
+TRACE::2021-10-23.17:46:37::SCWBifWriter::bitstream found in the design
+TRACE::2021-10-23.17:46:37::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-10-23.17:46:37::SCWBifWriter::proc type : 
+TRACE::2021-10-23.17:46:37::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-10-23.17:46:37::SCWBifWriter::Device type is : zynq
+TRACE::2021-10-23.17:46:37::SCWBifWriter::Writing BIF to file : D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hello_hls_rtl_m_system/_ide/bootimage/template_hello_hls_rtl_m_system.bif
+TRACE::2021-10-23.17:46:37::SCWBifWriter::Writing the Zynq Baremetal bif 

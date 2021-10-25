@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# xsim v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Sat Oct 23 11:26:14 2021
+# Process ID: 20320
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/hls_ALU/xsim_script.tcl}
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/xsim.log
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/hls_ALU/xsim_script.tcl
+# xsim {hls_ALU} -autoloadwcfg -tclbatch {hls_ALU.tcl}
+Time resolution is 1 ps
+source hls_ALU.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "885000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 945 ns : File "D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/hls_ALU.autotb.v" Line 311
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 23 11:26:19 2021...

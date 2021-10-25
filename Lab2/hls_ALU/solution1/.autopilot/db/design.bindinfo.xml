@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op udiv" ID="" IMPL="auto_seq" LATENCY="19" OPTYPE="udiv" PRAGMA="" RTLNAME="udiv_16ns_16ns_16_20_seq_1_U1" SOURCE="hls_ALU.cpp:10" VARIABLE="udiv_ln10" MODULE="hls_ALU" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op mul" ID="" IMPL="dsp" LATENCY="3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16ns_16ns_32_4_1_U2" SOURCE="hls_ALU.cpp:9" VARIABLE="mul_ln9" MODULE="hls_ALU" LOOP="" DSP="1" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op sub" ID="" IMPL="fabric" LATENCY="0" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln8_fu_102_p2" SOURCE="hls_ALU.cpp:8" VARIABLE="sub_ln8" MODULE="hls_ALU" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln7_fu_118_p2" SOURCE="hls_ALU.cpp:7" VARIABLE="add_ln7" MODULE="hls_ALU" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

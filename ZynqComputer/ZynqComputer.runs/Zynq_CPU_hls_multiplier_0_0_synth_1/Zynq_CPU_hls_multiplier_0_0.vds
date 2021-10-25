@@ -1,0 +1,290 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Thu Oct 21 16:32:20 2021
+# Process ID: 29728
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1
+# Command line: vivado.exe -log Zynq_CPU_hls_multiplier_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_CPU_hls_multiplier_0_0.tcl
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/Zynq_CPU_hls_multiplier_0_0.vds
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Zynq_CPU_hls_multiplier_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/GitHub/ECE4810J_FA2021/ip_repo/rtl_divider_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/GitHub/ECE4810J_FA2021/ip_repo/rtl_multiplier_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_multiplier/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top Zynq_CPU_hls_multiplier_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17592
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1242.000 ; gain = 38.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Zynq_CPU_hls_multiplier_0_0' [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/synth/Zynq_CPU_hls_multiplier_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'hls_multiplier' [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier.v:12]
+INFO: [Synth 8-6157] synthesizing module 'hls_multiplier_CRTLS_s_axi' [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_CRTLS_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_CRTLS_s_axi.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'hls_multiplier_CRTLS_s_axi' (1#1) [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_CRTLS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hls_multiplier_mul_mul_16ns_16ns_32_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_mul_mul_16ns_16ns_32_4_1.v:32]
+INFO: [Synth 8-6157] synthesizing module 'hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0' [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_mul_mul_16ns_16ns_32_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0' (2#1) [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_mul_mul_16ns_16ns_32_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'hls_multiplier_mul_mul_16ns_16ns_32_4_1' (3#1) [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier_mul_mul_16ns_16ns_32_4_1.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'hls_multiplier' (4#1) [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ipshared/95bd/hdl/verilog/hls_multiplier.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'Zynq_CPU_hls_multiplier_0_0' (5#1) [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/synth/Zynq_CPU_hls_multiplier_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.387 ; gain = 91.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.387 ; gain = 91.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.387 ; gain = 91.316
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1294.387 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/constraints/hls_multiplier_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.gen/sources_1/bd/Zynq_CPU/ip/Zynq_CPU_hls_multiplier_0_0/constraints/hls_multiplier_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1412.457 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1423.430 ; gain = 10.973
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1423.430 ; gain = 220.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1423.430 ; gain = 220.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1423.430 ; gain = 220.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'hls_multiplier_CRTLS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'hls_multiplier_CRTLS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'hls_multiplier_CRTLS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'hls_multiplier_CRTLS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1423.430 ; gain = 220.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   8 Input   32 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   5 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_tmp_reg is absorbed into DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_tmp0 is absorbed into DSP mul_mul_16ns_16ns_32_4_1_U1/hls_multiplier_mul_mul_16ns_16ns_32_4_1_DSP48_0_U/p_reg_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.430 ; gain = 220.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|hls_multiplier | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1427.145 ; gain = 224.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1449.305 ; gain = 246.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1451.344 ; gain = 248.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     1|
+|2     |LUT1    |     1|
+|3     |LUT2    |     4|
+|4     |LUT3    |    53|
+|5     |LUT4    |    11|
+|6     |LUT5    |    21|
+|7     |LUT6    |    14|
+|8     |MUXF7   |     2|
+|9     |FDRE    |   153|
+|10    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1457.164 ; gain = 125.051
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1457.164 ; gain = 254.094
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1469.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1473.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 76b50620
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 1473.789 ; gain = 270.719
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/Zynq_CPU_hls_multiplier_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Zynq_CPU_hls_multiplier_0_0, cache-ID = 43890d7cc90c4954
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/GitHub/ECE4810J_FA2021/ZynqComputer/ZynqComputer.runs/Zynq_CPU_hls_multiplier_0_0_synth_1/Zynq_CPU_hls_multiplier_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Zynq_CPU_hls_multiplier_0_0_utilization_synth.rpt -pb Zynq_CPU_hls_multiplier_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 21 16:33:20 2021...

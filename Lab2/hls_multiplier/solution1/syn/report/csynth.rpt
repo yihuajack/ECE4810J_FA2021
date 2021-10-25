@@ -1,0 +1,68 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_multiplier'
+================================================================
++ General Information: 
+    * Date:           Fri Oct  8 12:40:02 2021
+    * Version:        2021.1.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)
+    * Project:        hls_multiplier
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |      Modules     | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |      & Loops     | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ hls_multiplier  |     -|  4.15|        3|  30.000|         -|        4|     -|        no|     -|  1 (~0%)|  116 (~0%)|  193 (~0%)|    -|
+    +------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE
++-------------+------------+---------------+--------+----------+
+| Interface   | Data Width | Address Width | Offset | Register |
++-------------+------------+---------------+--------+----------+
+| s_axi_CRTLS | 32         | 6             | 24     | 0        |
++-------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| a        | in        | unsigned short |
+| b        | in        | unsigned short |
+| return   | out       | unsigned int   |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+-----------------------+----------+-----------------------+
+| Argument | HW Name               | HW Type  | HW Info               |
++----------+-----------------------+----------+-----------------------+
+| a        | s_axi_CRTLS a         | register | offset=0x18, range=32 |
+| b        | s_axi_CRTLS b         | register | offset=0x20, range=32 |
+| return   | s_axi_CRTLS ap_return | register | offset=0x10, range=32 |
++----------+-----------------------+----------+-----------------------+
+
+

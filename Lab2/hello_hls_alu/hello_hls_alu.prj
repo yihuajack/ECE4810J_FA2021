@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="hello_hls_alu" location="D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hello_hls_alu" platform="D:/Documents/GitHub/ECE4810J_FA2021/Lab2/Zynq_CPU_wrapper_hw_platform_5/export/Zynq_CPU_wrapper_hw_platform_5/Zynq_CPU_wrapper_hw_platform_5.xpfm" platformUID="xilinx:arty-z7-20::0.0(custom)" systemProject="hello_hls_alu_system" sysConfig="Zynq_CPU_wrapper_hw_platform_5" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="974559d821dcca35c31fb896c6e5f5ce">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1089115168">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1517506690" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Sat Oct 23 11:26:12 2021
+# Process ID: 3500
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/xsim.dir/hls_ALU/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/webtalk.log
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source D:/Documents/GitHub/ECE4810J_FA2021/Lab2/hls_ALU/solution1/sim/verilog/xsim.dir/hls_ALU/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 23 11:26:12 2021...
