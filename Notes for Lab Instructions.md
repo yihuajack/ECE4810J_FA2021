@@ -2,9 +2,9 @@
 
 Author: Yihua Liu
 
-Date: October 12, 2021 - October 21, 2021
+Date: October 12, 2021 - December 9, 2021
 
-These notes are based on Xilinx Design Tools Vitis Unified Software Platform 2021.1 (version 2021.1.1, released on August 3, 2021, installed on August 9, 2021), but most of them are also useful for other versions.
+These notes are based on Xilinx Design Tools Vitis Unified Software Platform 2021.1 (version 2021.1.1, released on August 3, 2021, installed on August 9, 2021), but most of them are also useful for other versions. The default working directory is D:\Documents\GitHub\ECE4810J_FA2021. Some files may or have to contain absolute paths, be careful.
 
 ## Lab 1
 
@@ -103,7 +103,7 @@ There is an error in the instruction, to Create Boot Image, you should right cli
 
 4. Programming Python on Arty Z7-20
 
-If you could not open pynq:9090 even you have set up your board and LEDs illuminate properly, you should do the following configuration:
+If you could not connect to the Internet through pynq after you have set up your board and LEDs illuminate properly, you should do the following configuration:
 
 For Windows 10/11, go Control Panel->Network and Internet->Network and Sharing Center->View your active networks->Access type: Internet, Connections: WLAN (or the network you are currently connecting, since you may connect the board and your computer by a cable, you are probably using WLAN)->Properties (refer to http://xilinx.eetrend.com/content/2019/100046325.html). In the pop-up window <network_name> Properties, go tab Sharing, in Internet Connection Sharing, check "Allow other network users to connect through this computer's Internet connection", and for Home networking connection: Select a private network connection, select the proper connection (usually it is ethernet). Refresh Pynq:9090, you will be able to connect. The password is `xilinx` by default.
 
@@ -263,7 +263,7 @@ Host    pynq
 
 on your localhost. Then, you can use `ssh pynq` to connect to the board by SSH.
 
-### Bonus 3: Configure PyCharm to remote run by SSH
+### Bonus 3: Configure SSH remote to PyCharm
 
 Open PyCharm, create a project named pynq, File->Settings...->Project: pynq->Python Interpreter->Python Interpreter: Add.... In pop-up window Add Python Interpreter->SSH Interpreter->New server configuration, Host: 192.168.137.101, Port: 2222 Username: xilinx. Enter password. Interpreter: /usr/bin/python3. Check "Execute code using this interpreter with root privileges via sudo" and "Automatically upload project files to the server". In Settings->Tools->SSH Configurations->Add, Host: 192.168.137.101, Port: 2222, Username: xilinx, Authentication type: Password, Password: \*\*\*\*\*\*. Check Save password. In Settings->Tools->SSH Terminal->Connection settings->SSH configuration, select xilinx@192.168.137.101:2222. In Tools->Deployment->Configuration..., in pop-up window Deployment, Add->SFTP, in pop-up window Create New Server, type New server name: pynq. Connection: SSH confiiguration: xilinx@192.168.137.101:2222, Root path: Autodetect (/home/xilinx), Web server URL: http://pynq:9090. Mappings: Local path: D:\Documents\Programming\Python\pynq, Deployment path: /jupyter_notebooks, Web path: /. Reference: https://www.cnblogs.com/mehome/p/9321188.html.
 
@@ -282,3 +282,189 @@ Type `from pynq import Overlay` and enter, it will successfully run if you are l
 > runnerw.exe: CreateProcess failed with error 2
 
 Go File->Settings->Build, Execution, Deployment->Jupyter->Jupyter Servers->Configured Server: http://pynq:9090.
+
+## Lab 4
+
+2. Optimizing Performance through Pipelining
+
+2.1 Create a Vivado HLS Project from Command Line
+
+If you run `make` and get error:
+
+> Make is not recognized as an internal or external command
+
+refer to my article: https://blog.csdn.net/yihuajack/article/details/121047540.
+
+If you get error: "which: no vitis_hls.bat in …", it is because current Makefile is problematic. It does not affect your results of the test, because the test does not use `vitis_hls.bat` at all, so do not worry. It is expected to be repaired next semester.
+
+Then, in Vitis HLS 2021.1 Command Prompt, execute
+
+```
+vitis_hls –f pynq_yuv_filter.tcl
+vitis_hls -p yuv_filter.prj
+```
+
+Notice that different old Vivado HLS, new Vitis HLS automatically enables PIPELINE directive, so if you keep default settings, you will see the following in `vitis_hls.log` and `yuv_filter.prj/solution1/solution1.log`:
+
+> INFO: [XFORM 203-510] Pipelining loop 'RGB2YUV_LOOP_Y' (yuv_filter.c:34) in function 'yuv_filter' automatically.
+> INFO: [XFORM 203-510] Pipelining loop 'YUV_SCALE_LOOP_Y' (yuv_filter.c:118) in function 'yuv_filter' automatically.
+> INFO: [XFORM 203-510] Pipelining loop 'YUV2RGB_LOOP_Y' (yuv_filter.c:72) in function 'yuv_filter' automatically.
+
+To prevent this, open tab `yuv_filter.c`. Menu Window->Show View->Directive, open Directive tab, for each of `rgb2yuv`, `yuv2rgb`, and `yuv_scale`, right click it, Insert Directive... In pop-up window Vitis HLS Directive Editor, Directive: PIPELINE, check Options: off (optional). After done this, you will see a new directive: HLS PIPELINE off. Run C Synthesis->Active Solution again.
+
+2.5 Apply DATAFLOW Directive and Configuration Command
+
+Apply Dataflow configuration command, generate the solution, and observe the improved resources utilization.
+
+In Vitis HLS 2021.1, Solution->Solution Settings... In pop-up window Solution Settings (solution3), General->Configuration Settings->Commands, it is different from Vivado HLS. In Vivado HLS, there will be no commands at first and you can click Add..., Remove, and Edit... buttons on the right. However, in Vitis HLS, you just directly go to `config_dataflow` in Name column, expand it, and modify its values. In this step, I found a very strange bug of Vitis HLS. You can refer to my bug report in `lab4/Bug_report.txt`.
+
+Solution 1. Modify Line 10 of your `Lab4/source_code/yuv_filter.prj/solution3/solution3.aps` from
+
+> <config_dataflow default_channel="fifo" scalar_fifo_depth="0" start_fifo_depth="0"/>
+
+to
+
+> <config_dataflow default_channel="fifo" fifo_depth="2" scalar_fifo_depth="0" start_fifo_depth="0"/>
+
+and redo C Synthesis.
+
+Solution 2. Solution Settings (solution3)->General->Configuration Settings->Commands->config_storage->fifo impl, change value from default `autosrl` to `srl` and redo C Synthesis.
+
+2.6 Export and Implement the Design in Vivado HLS
+
+In Vitis HLS, the window Export RTL is different from Vivado HLS's. You may not be able to find the Evaluate Generated RTL field and the Vivado synthesis, place and route check box. You have to go Solution Settings (solution3)->General->Configuration Settings->Commands->config_export->rtl, change its value from default `verilog` to `VHDL`. According to [Exporting the RTL Design (xilinx.com)](https://www.xilinx.com/html_docs/xilinx2021_1/vitis_doc/export_rtl_vitis_hls.html), you have to go Flow Navigator->IMPLEMENTATION->Run Implementation, in pop-up window Run Implementation, select RTL Synthesis, Place & Route, and change RTL from Verilog to VHDL. If you do not run implementation first, Export RTL will automatically do implementation, but it specifies RTL Synthesis only by default (see Export_RTL.log).
+
+If you get an error:
+
+> ERROR: [IMPL 213-28] Failed to generate IP.  yuv_filter.prj:solution3  2021年11月2日 下午12:56:40
+
+and `Lab4/source_code/yuv_filter.prj/solution3/impl/ip/hs_err_pid38996.log` shows as `Lab4/hs_err_pid38996.log`, reboot your computer and re-run implementation. You can specify IP Location and it will automatically export RTL there.
+
+## Lab 5
+
+2. Arty HDMI Demo
+
+2.1 Arty Z7 HDMI In Demo
+
+For latest version (Arty Z7-20 HDMI Input Demo Xilinx Tools 2020.1), do not clone the GitHub repository and try to follow [Using Digilent Github Demo Projects - Digilent Reference](https://digilent.com/reference/learn/programmable-logic/tutorials/github-demos/start) to do create_project. Instead, directly go to Release page and download the two files: [Arty-Z7-20-HDMI-In-hw.xpr.zip](https://github.com/Digilent/Arty-Z7-20-hdmi-in/releases/download/v2020.1-1/Arty-Z7-20-HDMI-In-hw.xpr.zip) and [Arty-Z7-20-HDMI-In-sw.ide.zip](https://github.com/Digilent/Arty-Z7-20-hdmi-in/releases/download/v2020.1-1/Arty-Z7-20-HDMI-In-sw.ide.zip). Extract the zip files.
+
+For Vivado solution,  open Arty-Z7-20-HDMI-In-hw.xpr/hw.xpr. You may need to automatically update and migrate the project first if you are using a newer version. However, after migrating, IP status will show that 8 hdmi_in IPs are "IP revision change" and need "Upgrade IP".
+
+For Vitis solution, select workspace as Arty-Z7-20-HDMI-In-sw.ide and open Vitis. It is empty at first, so you need to go File->Import..., in pop-up window Import Projects select Eclipse workspace or zip file (or you can click "Restore" button on the left to callout Explorer, right click blank->Import from Archive). Then, select root directory as Arty-Z7-20-HDMI-In-sw.ide and Select All Projects (Arty-Z7-20-HDMI-In, Arty-Z7-20-HDMI-In_system, and hdmi_in_wrapper). Do not check "Copy projects into workspace" option. Or you can follow instructions in provided READMD.md of Arty-Z7-20-hdmi-in, which directly import *.zip file. If you meet Make error, refer to https://github.com/Digilent/Arty-Z7-20-hdmi-in/issues/3.
+
+Alternative solution provided by Group 3 for older versions: In Project Explorer, right click the project->Re-generate BSP sources.
+
+3. Xilinx Design Constraints
+
+Use Ctrl+S to save constraints.
+
+You also need to modify lab5_source/ps7_create_pynq.tcl to correct paths. I have backed up the original TCL file as lab5_source/ps7_create_pynq.tcl.bak and lab5_source/ps7_create_pynq.tcl is already a modified version. If you have already got an error, you will fail to re-source the TCL file because the previous block design still exists. You need to remove the `system` block design from Sources->Hierarchy according to https://support.xilinx.com/s/article/59433.
+
+At step "Start a SDK session, point it to the c:/xup/fpga_flow/2018_2_zynq_sources/lab5/pynq/lab5.sdk workspace", if you use a higher version, you will be prompted by a window Incompatible Workspace:
+
+> Workspace
+> file:D:/Documents/GitHub/ECE4810J_FA2021/Lab5/lab5_source/pynq/lab5.sdk was written with an older tool and cannot be reused in Vitis.
+> Please use another workspace.
+>
+> Projects from the workspace can be imported through File -> Import
+
+If you try to import project manually, in pop-up window Import Projects->Import projects:
+
+> Problems detected while trying to import projects...
+>
+>     One or more imported SDK projects could not be migrated to Vitis and were removed from the workspace. Refer to Vitis Log view for details.
+>     One or more projects could not be identified as Vitis projects and will not be managed by the tool. Refer to Vitis Log view for details.
+
+Consequently, only `uart_led_zynq` is imported.
+
+My teammate using Vitis 2019.2 can successfully import this Vivado SDK 2018.2 project. However, this repository has been too large, so his Vitis project `Lab5/lab5.sdk` (29.6 MB) is ignored.
+
+## Lab 6
+
+2. TCL
+
+For TCL tutorial, [Tcl Tutorial Lesson 0 (tcl-lang.org)](https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0) (Mainly updated from September 2017 to January 2021 currently) gives output of every code blocks, additional instructions and examples, and better composing, which is easier to read. You do not need to copy the code blocks in https://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html (Mainly published on February 9, 2009 and little revisions till September 12, 2013) and run them in https://www.tutorialspoint.com/execute_tcl_online.php.
+
+For Lesson 9: Looping 101 - While loop, if you cannot understand why `while "$x < 5"` is an endless loop, refer to [tcl - Difference between {} and "" in while loop - Stack Overflow](https://stackoverflow.com/questions/56452511/difference-between-and-in-while-loop) (include Anthony's comment) and [if statement - Absolutely mystified with this TCL code - Stack Overflow](https://stackoverflow.com/questions/23147403/absolutely-mystified-with-this-tcl-code). Think carefully about that.
+
+3. Setting up the OpenLane flow
+
+OpenLane is a very active project. Your latest version on the master branch may be very different from previous version on the master branch. Different groups also produce different results, which is very strange. Thus, there is not any notes for this section.
+
+## Project
+
+When Create and Package New IP... and Edit IP->Add Sources->Add or create design sources, you need to check "Copy sources into IP Directory", otherwise later Vivado will show warnings.
+
+Remember to Create HDL wrapper, otherwise:
+
+Error: There must be at least one enabled AXI Port master interface.
+Error: There must be at least one enabled clock interface.
+Error: There must be a default clock.
+
+> [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+
+If "Could not load library 'librdi_coretasks' needed by 'core', please check installation.", reboot your computer.
+
+If you meet "vitis fatal error: xbasic_types.h: no such file or directory" or "vitis fatal error: xparameters.h: no such file or directory" and Vitis Log (IDE.log) shows:
+
+> 09:27:06 WARN	: Failed to closehw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:27:06 INFO	: Result from executing command 'getProjects': RemoteSystemsTempFiles;fir_filter_app;fir_filter_app_system;fir_filter_hdl_wrapper
+> 09:27:06 ERROR	: Failed to openhw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:27:06 ERROR	: Failed to update application flags from BSP for 'fir_filter_app'. Reason: null
+> java.lang.NullPointerException
+> 	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+> 	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+> 	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+> 	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+> 	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75)
+> 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006)
+> 09:27:08 ERROR	: Failed to compute checksum of hardware specification file used by project 'fir_filter_app'
+> 09:27:08 INFO	: Result from executing command 'getProjects': RemoteSystemsTempFiles;fir_filter_app;fir_filter_app_system;fir_filter_hdl_wrapper
+> 09:27:08 ERROR	: Failed to openhw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:27:08 INFO	: Result from executing command 'getProjects': RemoteSystemsTempFiles;fir_filter_app;fir_filter_app_system;fir_filter_hdl_wrapper
+> 09:27:08 ERROR	: Failed to openhw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:27:08 INFO	: Result from executing command 'getProjects': RemoteSystemsTempFiles;fir_filter_app;fir_filter_app_system;fir_filter_hdl_wrapper
+> 09:27:08 ERROR	: Failed to openhw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:42:23 INFO	: Checking for BSP changes to sync application flags for project 'fir_filter_app'...
+> 09:42:23 INFO	: Result from executing command 'getProjects': RemoteSystemsTempFiles;fir_filter_app;fir_filter_app_system;fir_filter_hdl_wrapper
+> 09:42:23 ERROR	: Failed to openhw "D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa"
+> Reason: D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/hw/fir_filter_hdl_wrapper.xsa is not available in the current workspace
+> use 'getprojects' command to see list of available projects in current workspace
+> 09:42:23 ERROR	: Failed to update application flags from BSP for 'fir_filter_app'. Reason: null
+> java.lang.NullPointerException
+> 	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305)
+> 	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214)
+> 	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:61)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78)
+> 	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+> 	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+> 	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+> 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+
+It is exactly the same problem as is discussed Lab 1 Section 4.5 although the errors are completely different! [KKilic](https://support.xilinx.com/s/profile/0052E00000N3gU8QAJ) reminded me in this post: [Vitis can`t open hardware xsa if I use a simple custom AXI-Lite IP (xilinx.com)](https://support.xilinx.com/s/question/0D52E00006hpPAySAM/vitis-cant-open-hardware-xsa-if-i-use-a-simple-custom-axilite-ip?language=en_US) that https://support.xilinx.com/s/article/75527 is related to this issue.
+
+You cannot call functions like `fopen()` because [unsupported c/c++ library function 'fopen' (xilinx.com)](https://support.xilinx.com/s/question/0D52E00006hpkGJSAY/unsupported-cc-library-function-fopen?language=en_US).
+
+Warnings:
+
+> In file included from ../src/helloworld.c:51:
+> D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/sw/fir_filter_hdl_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xbasic_types.h:102:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+> 102 | #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+>  |  ^~~~~~~
+> D:/Documents/GitHub/ECE4810J_FA2021/Project/fir_filter_hdl_wrapper/export/fir_filter_hdl_wrapper/sw/fir_filter_hdl_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xbasic_types.h:103:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+> 103 | #warning  Please refer the Standalone BSP UG647 for further details
+>  |  ^~~~~~~

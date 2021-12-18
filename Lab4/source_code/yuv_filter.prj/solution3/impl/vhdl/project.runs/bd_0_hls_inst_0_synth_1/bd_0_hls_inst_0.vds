@@ -1,0 +1,639 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Tue Nov  2 13:31:43 2021
+# Process ID: 20888
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg400-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 500
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1353.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'bd_0_hls_inst_0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.vhd:136]
+INFO: [Synth 8-3491] module 'yuv_filter' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:12' bound to instance 'U0' of component 'yuv_filter' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.vhd:329]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:92]
+INFO: [Synth 8-3491] module 'yuv_filter_entry_proc' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_entry_proc.vhd:12' bound to instance 'entry_proc_U0' of component 'yuv_filter_entry_proc' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:480]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_entry_proc' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_entry_proc.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_entry_proc' (1#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_entry_proc.vhd:39]
+INFO: [Synth 8-3491] module 'yuv_filter_rgb2yuv_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1.vhd:12' bound to instance 'rgb2yuv_1_U0' of component 'yuv_filter_rgb2yuv_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:505]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_rgb2yuv_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1.vhd:50]
+INFO: [Synth 8-3491] module 'yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:12' bound to instance 'grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72' of component 'yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:43]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:59' bound to instance 'mac_muladd_8ns_7s_8ns_15_4_1_U7' of component 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0_U' of component 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0' (2#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1' (3#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:59' bound to instance 'mac_muladd_8ns_7ns_8ns_15_4_1_U8' of component 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:350]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U' of component 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1' (4#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1' (5#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:59' bound to instance 'mac_muladd_8ns_5ns_8ns_13_4_1_U9' of component 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:367]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2_U' of component 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2' (6#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1' (7#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 15 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:59' bound to instance 'mac_muladd_8ns_8s_15s_16_4_1_U10' of component 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:384]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3_U' of component 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3' (8#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8s_15s_16_4_1' (9#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_15s_16_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:59' bound to instance 'mac_muladd_8ns_8s_16s_16_4_1_U11' of component 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:401]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U' of component 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4' (10#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8ns_8s_16s_16_4_1' (11#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_flow_control_loop_pipe_sequential_init' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_flow_control_loop_pipe_sequential_init.vhd:10' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'yuv_filter_flow_control_loop_pipe_sequential_init' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:418]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_flow_control_loop_pipe_sequential_init' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_flow_control_loop_pipe_sequential_init.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_flow_control_loop_pipe_sequential_init' (12#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_flow_control_loop_pipe_sequential_init.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y' (13#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y.vhd:43]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_mul_16ns_16ns_32_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:51' bound to instance 'mul_mul_16ns_16ns_32_4_1_U25' of component 'yuv_filter_mul_mul_16ns_16ns_32_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:67]
+INFO: [Synth 8-3491] module 'yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:6' bound to instance 'yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U' of component 'yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5' (14#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_mul_16ns_16ns_32_4_1' (15#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_rgb2yuv_1' (16#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_rgb2yuv_1.vhd:50]
+INFO: [Synth 8-3491] module 'yuv_filter_yuv_scale' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale.vhd:12' bound to instance 'yuv_scale_U0' of component 'yuv_filter_yuv_scale' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:541]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv_scale' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:12' bound to instance 'grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94' of component 'yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_8ns_8ns_15_1_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8ns_8ns_15_1_1.vhd:11' bound to instance 'mul_8ns_8ns_15_1_1_U37' of component 'yuv_filter_mul_8ns_8ns_15_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_8ns_8ns_15_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8ns_8ns_15_1_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_8ns_8ns_15_1_1' (17#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8ns_8ns_15_1_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_8ns_8ns_15_1_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8ns_8ns_15_1_1.vhd:11' bound to instance 'mul_8ns_8ns_15_1_1_U38' of component 'yuv_filter_mul_8ns_8ns_15_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:170]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_8ns_8ns_15_1_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8ns_8ns_15_1_1.vhd:11' bound to instance 'mul_8ns_8ns_15_1_1_U39' of component 'yuv_filter_mul_8ns_8ns_15_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:182]
+INFO: [Synth 8-3491] module 'yuv_filter_flow_control_loop_pipe_sequential_init' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_flow_control_loop_pipe_sequential_init.vhd:10' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'yuv_filter_flow_control_loop_pipe_sequential_init' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y' (18#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y.vhd:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_mul_16ns_16ns_32_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:51' bound to instance 'mul_mul_16ns_16ns_32_4_1_U51' of component 'yuv_filter_mul_mul_16ns_16ns_32_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale.vhd:221]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv_scale' (19#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv_scale.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_yuv2rgb_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1.vhd:12' bound to instance 'yuv2rgb_1_U0' of component 'yuv_filter_yuv2rgb_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:593]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv2rgb_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1.vhd:55]
+INFO: [Synth 8-3491] module 'yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:12' bound to instance 'grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72' of component 'yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:46]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_8s_9s_17_1_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8s_9s_17_1_1.vhd:11' bound to instance 'mul_8s_9s_17_1_1_U65' of component 'yuv_filter_mul_8s_9s_17_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mul_8s_9s_17_1_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8s_9s_17_1_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mul_8s_9s_17_1_1' (20#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_8s_9s_17_1_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:59' bound to instance 'mac_muladd_9s_9ns_8ns_18_4_1_U66' of component 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6_U' of component 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6' (21#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1' (22#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:59' bound to instance 'mac_muladd_8s_8s_17s_17_4_1_U67' of component 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:324]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7_U' of component 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7' (23#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_8s_17s_17_4_1' (24#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_8s_17s_17_4_1.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:59' bound to instance 'mac_muladd_8s_9ns_18s_18_4_1_U68' of component 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:341]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:9' bound to instance 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8_U' of component 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8' (25#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_mac_muladd_8s_9ns_18s_18_4_1' (26#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mac_muladd_8s_9ns_18s_18_4_1.vhd:77]
+INFO: [Synth 8-3491] module 'yuv_filter_flow_control_loop_pipe_sequential_init' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_flow_control_loop_pipe_sequential_init.vhd:10' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'yuv_filter_flow_control_loop_pipe_sequential_init' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:358]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y' (27#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y.vhd:46]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_mul_mul_16ns_16ns_32_4_1' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_mul_mul_16ns_16ns_32_4_1.vhd:51' bound to instance 'mul_mul_16ns_16ns_32_4_1_U81' of component 'yuv_filter_mul_mul_16ns_16ns_32_4_1' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_yuv2rgb_1' (28#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_yuv2rgb_1.vhd:55]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d3_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:47' bound to instance 'Y_scale_c_U' of component 'yuv_filter_fifo_w8_d3_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:634]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w8_d3_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:66]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d3_S_shiftReg' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:10' bound to instance 'U_yuv_filter_fifo_w8_d3_S_shiftReg' of component 'yuv_filter_fifo_w8_d3_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w8_d3_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w8_d3_S_shiftReg' (29#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w8_d3_S' (30#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d3_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:47' bound to instance 'U_scale_c_U' of component 'yuv_filter_fifo_w8_d3_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:647]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d3_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d3_S.vhd:47' bound to instance 'V_scale_c_U' of component 'yuv_filter_fifo_w8_d3_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:660]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_yuv_channels_ch1_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:673]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:66]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S_shiftReg' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:10' bound to instance 'U_yuv_filter_fifo_w8_d2_S_shiftReg' of component 'yuv_filter_fifo_w8_d2_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w8_d2_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w8_d2_S_shiftReg' (31#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w8_d2_S' (32#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_yuv_channels_ch2_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:686]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_yuv_channels_ch3_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:699]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w16_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:47' bound to instance 'p_yuv_width_U' of component 'yuv_filter_fifo_w16_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:712]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w16_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:66]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w16_d2_S_shiftReg' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:10' bound to instance 'U_yuv_filter_fifo_w16_d2_S_shiftReg' of component 'yuv_filter_fifo_w16_d2_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_fifo_w16_d2_S_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w16_d2_S_shiftReg' (33#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_fifo_w16_d2_S' (34#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w16_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:47' bound to instance 'p_yuv_height_U' of component 'yuv_filter_fifo_w16_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:725]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_scale_channels_ch1_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:738]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_scale_channels_ch2_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:751]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w8_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w8_d2_S.vhd:47' bound to instance 'p_scale_channels_ch3_U' of component 'yuv_filter_fifo_w8_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:764]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w16_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:47' bound to instance 'p_scale_width_U' of component 'yuv_filter_fifo_w16_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:777]
+INFO: [Synth 8-3491] module 'yuv_filter_fifo_w16_d2_S' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_fifo_w16_d2_S.vhd:47' bound to instance 'p_scale_height_U' of component 'yuv_filter_fifo_w16_d2_S' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:790]
+INFO: [Synth 8-3491] module 'yuv_filter_start_for_yuv_scale_U0' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:47' bound to instance 'start_for_yuv_scale_U0_U' of component 'yuv_filter_start_for_yuv_scale_U0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:803]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_start_for_yuv_scale_U0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:66]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_start_for_yuv_scale_U0_shiftReg' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:10' bound to instance 'U_yuv_filter_start_for_yuv_scale_U0_shiftReg' of component 'yuv_filter_start_for_yuv_scale_U0_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_start_for_yuv_scale_U0_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_start_for_yuv_scale_U0_shiftReg' (35#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_start_for_yuv_scale_U0' (36#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv_scale_U0.vhd:66]
+INFO: [Synth 8-3491] module 'yuv_filter_start_for_yuv2rgb_1_U0' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:47' bound to instance 'start_for_yuv2rgb_1_U0_U' of component 'yuv_filter_start_for_yuv2rgb_1_U0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_start_for_yuv2rgb_1_U0' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:66]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'yuv_filter_start_for_yuv2rgb_1_U0_shiftReg' declared at 'd:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:10' bound to instance 'U_yuv_filter_start_for_yuv2rgb_1_U0_shiftReg' of component 'yuv_filter_start_for_yuv2rgb_1_U0_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'yuv_filter_start_for_yuv2rgb_1_U0_shiftReg' [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_start_for_yuv2rgb_1_U0_shiftReg' (37#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter_start_for_yuv2rgb_1_U0' (38#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter_start_for_yuv2rgb_1_U0.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'yuv_filter' (39#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ipshared/bd57/hdl/vhdl/yuv_filter.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'bd_0_hls_inst_0' (40#1) [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.vhd:136]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1353.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1353.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1353.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1353.879 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/yuv_filter_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/yuv_filter_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1462.941 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1465.918 ; gain = 2.977
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   22 Bit       Adders := 2     
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 1     
+	   4 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 6     
+	   3 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   3 Input   14 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 12    
++---XORs : 
+	   2 Input      8 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
+	               22 Bit    Registers := 2     
+	               18 Bit    Registers := 2     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 17    
+	               15 Bit    Registers := 6     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 41    
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 92    
++---Muxes : 
+	   2 Input   22 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 8     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	   2 Input    6 Bit        Muxes := 3     
+	   7 Input    6 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 77    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP p_reg_reg, operation Mode is: (C+(A2*B2)')'.
+DSP Report: register a_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register b_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register p_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: register m_reg_reg is absorbed into DSP p_reg_reg.
+DSP Report: operator p is absorbed into DSP p_reg_reg.
+DSP Report: operator m is absorbed into DSP p_reg_reg.
+DSP Report: Generating DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_tmp_reg is absorbed into DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: operator rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_cvt is absorbed into DSP rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: Generating DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_tmp_reg is absorbed into DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: operator yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_cvt is absorbed into DSP yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: Generating DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln2_reg_277_reg, operation Mode is: (A2*B)'.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/V_reg_262_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln2_reg_277_reg.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln2_reg_277_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln2_reg_277_reg.
+DSP Report: operator yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/mul_8ns_8ns_15_1_1_U39/dout is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln2_reg_277_reg.
+DSP Report: Generating DSP yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mul_8s_9s_17_1_1_U65/dout, operation Mode is: (A:0x3fffff30)*B2.
+DSP Report: register yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/E_reg_679_reg is absorbed into DSP yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mul_8s_9s_17_1_1_U65/dout.
+DSP Report: operator yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mul_8s_9s_17_1_1_U65/dout is absorbed into DSP yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mul_8s_9s_17_1_1_U65/dout.
+DSP Report: Generating DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg is absorbed into DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: register yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_tmp_reg is absorbed into DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: operator yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_cvt is absorbed into DSP yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81/yuv_filter_mul_mul_16ns_16ns_32_4_1_DSP48_5_U/p_reg_reg.
+DSP Report: Generating DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln1_reg_272_reg, operation Mode is: (A2*B)'.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/U_reg_257_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln1_reg_272_reg.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln1_reg_272_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln1_reg_272_reg.
+DSP Report: operator yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/mul_8ns_8ns_15_1_1_U38/dout is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln1_reg_272_reg.
+DSP Report: Generating DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln_reg_267_reg, operation Mode is: (A2*B)'.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/Y_reg_252_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln_reg_267_reg.
+DSP Report: register yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln_reg_267_reg is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln_reg_267_reg.
+DSP Report: operator yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/mul_8ns_8ns_15_1_1_U37/dout is absorbed into DSP yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/trunc_ln_reg_267_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++-------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                      | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1_DSP48_0  | (C+(A2*B2)')'     | 15     | 7      | 9      | -      | 15     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1 | (C+(A2*B2)')'     | 15     | 15     | 9      | -      | 15     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1_DSP48_2 | (C+(A2*B2)')'     | 13     | 13     | 9      | -      | 13     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8ns_8s_15s_16_4_1_DSP48_3  | (C+(A2*B2)')'     | 16     | 8      | 15     | -      | 16     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4  | (C+(A2*B2)')'     | 16     | 8      | 16     | -      | 16     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1_DSP48_6  | (C+(A2*B2)')'     | 18     | 9      | 9      | -      | 18     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8s_8s_17s_17_4_1_DSP48_7   | (C+(A2*B2)')'     | 8      | 8      | 17     | -      | 17     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter_mac_muladd_8s_9ns_18s_18_4_1_DSP48_8  | (C+(A2*B2)')'     | 18     | 8      | 18     | -      | 18     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
+|yuv_filter                                       | (A2*B2)'          | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|yuv_filter                                       | (A2*B2)'          | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|yuv_filter                                       | (A2*B)'           | 8      | 8      | -      | -      | 15     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|yuv_filter                                       | (A:0x3fffff30)*B2 | 8      | 9      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|yuv_filter                                       | (A2*B2)'          | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|yuv_filter                                       | (A2*B)'           | 8      | 8      | -      | -      | 15     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|yuv_filter                                       | (A2*B)'           | 8      | 8      | -      | -      | 15     | 1    | 0    | -    | -    | -     | 1    | 0    | 
++-------------------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1465.918 ; gain = 112.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1485.059 ; gain = 131.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|yuv_filter  | rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/R_reg_647_pp0_iter6_reg_reg[7]       | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|yuv_filter  | rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_loop_exit_ready_pp0_iter8_reg_reg | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|yuv_filter  | yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/D_reg_663_pp0_iter3_reg_reg[7]       | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|yuv_filter  | yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/ap_loop_exit_ready_pp0_iter5_reg_reg | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[2] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   104|
+|2     |DSP48E1 |    15|
+|8     |LUT1    |    23|
+|9     |LUT2    |   154|
+|10    |LUT3    |   133|
+|11    |LUT4    |   187|
+|12    |LUT5    |    66|
+|13    |LUT6    |   137|
+|14    |SRL16E  |    42|
+|15    |FDRE    |   836|
+|16    |FDSE    |    36|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1489.605 ; gain = 23.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1489.605 ; gain = 135.727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1501.672 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1507.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: bffc331a
+INFO: [Common 17-83] Releasing license: Synthesis
+156 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1507.297 ; gain = 153.418
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 8bdbf3aa6befc25c
+INFO: [Coretcl 2-1174] Renamed 62 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/impl/vhdl/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  2 13:32:32 2021...

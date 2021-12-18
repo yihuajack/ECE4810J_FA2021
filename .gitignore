@@ -1,3 +1,6 @@
 **/.metadata
 Lab1/Zynq_CPU_wrapper_hw_platform_*
 Lab2/Zynq_CPU_wrapper_hw_platform_*
+Lab4/yuv_filter_vitis_2019.2
+Lab5/lab5.sdk
+Project/fir_filter_hdl_wrapper

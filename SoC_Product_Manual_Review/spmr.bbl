@@ -1,0 +1,111 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{chatha2021qualcomm}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=CK}{%
+         family={Chatha},
+         familyi={C\bibinitperiod},
+         given={Karam},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CK1}
+    \strng{fullhash}{CK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{2021 IEEE Hot Chips 33 Symposium (HCS)}
+    \field{pages}{1\bibrangedash 19}
+    \field{title}{Qualcomm{\textregistered} Cloud Al 100: 12TOPS/W Scalable,
+  High Performance and Low Latency Deep Learning Inference Accelerator}
+    \field{year}{2021}
+  \endentry
+
+  \entry{eetimes2019}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={McGrath},
+         familyi={M\bibinitperiod},
+         given={Dylan},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Qualcomm Targets AI Inferencing in the Cloud}
+    \verb{url}
+    \verb https://www.eetimes.com/qualcomm-targets-ai-inferencing-in-the-cloud/
+    \endverb
+    \field{journaltitle}{EE Times}
+    \field{day}{10}
+    \field{month}{04}
+    \field{year}{2019}
+  \endentry
+
+  \entry{qualcomm}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=Q}{%
+         family={Qualcomm},
+         familyi={Q\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{Q1}
+    \strng{fullhash}{Q1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{subtitle}{The future of AI edge-to-cloud computing is here}
+    \field{title}{CLOUD AI}
+    \verb{url}
+    \verb https://www.qualcomm.com/products/cloud-artificial-intelligence
+    \endverb
+    \field{year}{2021}
+  \endentry
+
+  \entry{qualcomm100}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=Q}{%
+         family={Qualcomm},
+         familyi={Q\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{Q1}
+    \strng{fullhash}{Q1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{title}{CLOUD AI 100}
+    \verb{url}
+    \verb https://www.qualcomm.com/products/cloud-ai-100
+    \endverb
+    \field{year}{2021}
+  \endentry
+\enddatalist
+\endinput

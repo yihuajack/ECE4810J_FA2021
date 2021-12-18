@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Thu Dec  9 22:08:40 2021
+# Process ID: 5288
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Project/FIR_Filter/FIR_Filter.runs/fir_filter_auto_pc_0_synth_1
+# Command line: vivado.exe -log fir_filter_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_filter_auto_pc_0.tcl
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Project/FIR_Filter/FIR_Filter.runs/fir_filter_auto_pc_0_synth_1/fir_filter_auto_pc_0.vds
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Project/FIR_Filter/FIR_Filter.runs/fir_filter_auto_pc_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fir_filter_auto_pc_0.tcl -notrace

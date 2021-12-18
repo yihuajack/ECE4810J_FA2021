@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Fri Nov  5 16:56:47 2021
+# Process ID: 6576
+# Current directory: D:/Documents/GitHub/ECE4810J_FA2021/Lab5/lab5/lab5.runs/impl_1
+# Command line: vivado.exe -log ios.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ios.tcl -notrace
+# Log file: D:/Documents/GitHub/ECE4810J_FA2021/Lab5/lab5/lab5.runs/impl_1/ios.vdi
+# Journal file: D:/Documents/GitHub/ECE4810J_FA2021/Lab5/lab5/lab5.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ios.tcl -notrace

@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1635759818393">
+  <ports id="1" name="in_channels_ch1" type="PortType" originalName="in.channels.ch1" coreName="RAM" coreId="4294967295" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in_channels_ch2" type="PortType" originalName="in.channels.ch2" coreName="RAM" coreId="1852142702" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="in_channels_ch3" type="PortType" originalName="in.channels.ch3" coreName="RAM" coreId="788537856" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="4" name="in_width_read" type="PortType" originalName="in.width" coreId="1852142702" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="in_height_read" type="PortType" originalName="in.height" coreId="1563572020" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="out_channels_ch1" type="PortType" originalName="out.channels.ch1" coreName="RAM" coreId="1852142702" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="7" name="out_channels_ch2" type="PortType" originalName="out.channels.ch2" coreName="RAM" coreId="1852142702" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="8" name="out_channels_ch3" type="PortType" originalName="out.channels.ch3" coreName="RAM" coreId="1684367214" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="9" name="Y_scale" type="PortType" originalName="Y_scale" coreId="40" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="U_scale" type="PortType" originalName="U_scale" coreId="32" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="V_scale" type="PortType" originalName="V_scale" coreId="44" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="21" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="22" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="91" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="93" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="95" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="98" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="100" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="104" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="113" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="116" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="119" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="124" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="155" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="156" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="160" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="163" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@ports.5"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@ports.6"/>
+  <edges id="171" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@ports.7"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="183" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="186" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="211" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="213" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="219" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="220" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="222" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="249" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="250" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="251" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="252" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="253" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="254" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="255" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="256" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="257" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="258" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="259" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.11"/>
+  <edges source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.12"/>
+  <blocks id="30" name=".lr.ph6" type="BlockType">
+    <controlOutputObjs>block_35</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="y" originalName="y" coreId="236" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="x" originalName="x" coreId="543649385" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="indvar_flatten" coreId="1667200117" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="V_scale_read" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>V_scale</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="U_scale_read" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>U_scale</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="Y_scale_read" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>Y_scale</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="in_height_read_1" lineNumber="111" originalName="in.height" fileName="yuv_filter.c" fileDirectory=".." coreId="1701736033" contextFuncName="yuv_scale" bitwidth="16" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>in_height_read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="in_width_read_1" lineNumber="111" originalName="in.width" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="16" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>in_width_read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln137" lineNumber="137" fileName="yuv_filter.c" fileDirectory=".." rtlName="zext_ln137_fu_215_p1" coreId="2036689696" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="137" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="zext_ln138" lineNumber="138" fileName="yuv_filter.c" fileDirectory=".." rtlName="zext_ln138_fu_219_p1" coreId="757935405" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="138" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="zext_ln139" lineNumber="139" fileName="yuv_filter.c" fileDirectory=".." rtlName="zext_ln139_fu_223_p1" coreId="877679428" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="139" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln111" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." rtlName="grp_fu_403_p00" coreId="1936683105" contextFuncName="yuv_scale" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln111_1" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." rtlName="grp_fu_403_p10" coreId="1330010146" contextFuncName="yuv_scale" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mul_ln111" lineNumber="111" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_mul_16ns_16ns_32_4_1_U23" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="yuv_scale" bitwidth="32" opcode="mul" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="111" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="indvar_flatten_write_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="x_write_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="1344405620" contextFuncName="yuv_scale" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="y_write_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="1769218162" contextFuncName="yuv_scale" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="1635000320" contextFuncName="yuv_scale" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <controlInputObjs>block_35</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>111</validLinenumbers>
+      <validLinenumbers>137</validLinenumbers>
+      <validLinenumbers>138</validLinenumbers>
+      <validLinenumbers>139</validLinenumbers>
+      <validLinenumbers>129</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="84" name="._crit_edge7.loopexit" type="BlockType">
+    <controlInputObjs>block_35</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="mrv" lineNumber="145" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="32" opcode="insertvalue" nodeLabel="10.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="145" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="mrv_1" lineNumber="145" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="32" opcode="insertvalue" nodeLabel="10.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="145" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="_ln145" lineNumber="145" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" opcode="ret" nodeLabel="10.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="145" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>145</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="320" pipe_depth="6" RegionName="YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y">
+    <basic_blocks id="35" name="block_35" type="BlockType">
+      <controlInputObjs>.lr.ph6</controlInputObjs>
+      <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge7.loopexit</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="indvar_flatten_load" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="151666223" contextFuncName="yuv_scale" bitwidth="32" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." rtlName="icmp_ln129_fu_230_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="yuv_scale" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.47" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." rtlName="add_ln129_fu_235_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="yuv_scale" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.55" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="1885432901" contextFuncName="yuv_scale" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>._crit_edge.loopexit</controlInputObjs>
+        <controlInputObjs>._crit_edge7.loopexit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="yuv_filter.c">
+        <validLinenumbers>129</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="80" name="._crit_edge.loopexit" type="BlockType">
+      <controlInputObjs>block_35</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_35</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="y_load" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="16" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="x_load" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="16" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="x_2" lineNumber="129" originalName="x" fileName="yuv_filter.c" fileDirectory=".." rtlName="x_2_fu_276_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="yuv_scale" bitwidth="16" opcode="add" nodeLabel="5.0" m_display="0" m_delay="2.07" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="icmp_ln132" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." rtlName="icmp_ln132_fu_244_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="yuv_scale" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.42" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="select_ln118" lineNumber="118" fileName="yuv_filter.c" fileDirectory=".." rtlName="select_ln118_fu_249_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="yuv_scale" bitwidth="16" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.8" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="118" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="select_ln118_1" lineNumber="118" fileName="yuv_filter.c" fileDirectory=".." rtlName="select_ln118_1_fu_282_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="yuv_scale" bitwidth="16" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.8" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="118" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="trunc_ln134" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="trunc_ln134_fu_289_p1" coreId="0" contextFuncName="yuv_scale" bitwidth="12" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_cast" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="tmp_cast_fu_293_p3" coreId="1818326642" contextFuncName="yuv_scale" bitwidth="22" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="trunc_ln134_1" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="trunc_ln134_1_fu_301_p1" coreId="0" contextFuncName="yuv_scale" bitwidth="14" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_1_cast" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="tmp_1_cast_fu_305_p3" coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="add_ln134" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="add_ln134_fu_313_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="yuv_scale" bitwidth="22" opcode="add" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="zext_ln134" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="zext_ln134_fu_319_p1" coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="add_ln134_1" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="add_ln134_1_fu_322_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="yuv_scale" bitwidth="22" opcode="add" nodeLabel="5.0" m_display="0" m_delay="4.07" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="zext_ln134_1" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." rtlName="zext_ln134_1_fu_333_p1" coreId="0" contextFuncName="yuv_scale" bitwidth="64" opcode="zext" nodeLabel="6.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="in_channels_ch1_addr" lineNumber="134" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>in_channels_ch1</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="in_channels_ch2_addr" lineNumber="135" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="135" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>in_channels_ch2</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="in_channels_ch3_addr" lineNumber="136" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="136" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>in_channels_ch3</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="out_channels_ch1_addr" lineNumber="140" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="140" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>out_channels_ch1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="out_channels_ch2_addr" lineNumber="141" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="141" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>out_channels_ch2</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="out_channels_ch3_addr" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" bitwidth="22" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>out_channels_ch3</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="Y" lineNumber="134" originalName="Y" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="U" lineNumber="135" originalName="U" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="135" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="V" lineNumber="136" originalName="V" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="136" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="zext_ln137_1" lineNumber="137" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_ln137_fu_342_p00" coreId="0" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="137" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="mul_ln137" lineNumber="137" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_8ns_8ns_15_1_1_U20" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="8.0" m_display="0" m_delay="4.17" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="137" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="zext_ln138_1" lineNumber="138" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_ln138_fu_350_p00" coreId="0" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="138" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="mul_ln138" lineNumber="138" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_8ns_8ns_15_1_1_U21" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="8.0" m_display="0" m_delay="4.17" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="138" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="zext_ln139_1" lineNumber="139" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_ln139_fu_358_p00" coreId="0" contextFuncName="yuv_scale" bitwidth="15" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="139" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="mul_ln139" lineNumber="139" fileName="yuv_filter.c" fileDirectory=".." rtlName="mul_8ns_8ns_15_1_1_U22" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="8.0" m_display="0" m_delay="4.17" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="139" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="trunc_ln" lineNumber="140" fileName="yuv_filter.c" fileDirectory=".." rtlName="trunc_ln_reg_526" coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="140" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="out_channels_ch1_addr_write_ln140" lineNumber="140" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" opcode="store" nodeLabel="9.0" m_display="0" m_delay="3.25" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="140" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="trunc_ln1" lineNumber="141" fileName="yuv_filter.c" fileDirectory=".." rtlName="trunc_ln1_reg_531" coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="141" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="out_channels_ch2_addr_write_ln141" lineNumber="141" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" opcode="store" nodeLabel="9.0" m_display="0" m_delay="3.25" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="141" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="trunc_ln2" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." rtlName="trunc_ln2_reg_536" coreId="0" contextFuncName="yuv_scale" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="out_channels_ch3_addr_write_ln142" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="yuv_scale" opcode="store" nodeLabel="9.0" m_display="0" m_delay="3.25" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="y_1" lineNumber="132" originalName="y" fileName="yuv_filter.c" fileDirectory=".." rtlName="y_1_fu_257_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="yuv_scale" bitwidth="16" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.07" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="indvar_flatten_write_ln129" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="x_write_ln118" lineNumber="118" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" opcode="store" nodeLabel="5.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="118" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="y_write_ln132" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." coreId="0" contextFuncName="yuv_scale" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="D:\Documents\GitHub\ECE4810J_FA2021\Lab4\source_code" functionName="yuv_scale"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln0" coreId="0" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_35</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="yuv_filter.c">
+        <validLinenumbers>132</validLinenumbers>
+        <validLinenumbers>129</validLinenumbers>
+        <validLinenumbers>118</validLinenumbers>
+        <validLinenumbers>134</validLinenumbers>
+        <validLinenumbers>135</validLinenumbers>
+        <validLinenumbers>136</validLinenumbers>
+        <validLinenumbers>140</validLinenumbers>
+        <validLinenumbers>141</validLinenumbers>
+        <validLinenumbers>142</validLinenumbers>
+        <validLinenumbers>137</validLinenumbers>
+        <validLinenumbers>138</validLinenumbers>
+        <validLinenumbers>139</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <regnodes realName="zext_ln138_reg_456">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="in_channels_ch1_addr_reg_496">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln2_reg_536">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln137_reg_451">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="V_reg_521">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln132_reg_474">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="in_channels_ch2_addr_reg_501">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="in_height_read_1_reg_430">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="in_width_read_1_reg_436">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln1_reg_531">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln139_reg_461">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln134_1_reg_489">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln111_reg_441">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln118_reg_479">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten_reg_423">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln111_reg_466">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="y_reg_409">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="Y_reg_511">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="in_channels_ch3_addr_reg_506">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln_reg_526">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln134_1_reg_484">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="U_reg_516">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln111_1_reg_446">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="x_reg_416">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln134_1_fu_333">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln129_fu_230">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln1_fu_373">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln134_1_fu_322">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln111_1_fu_196">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_fu_72">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln138_1_fu_347">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln137_1_fu_339">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_393">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_398">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln134_fu_289">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_2_fu_276">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln138_fu_350">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln139_fu_358">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_fu_76">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_channels_ch1_addr_gep_fu_114">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_cast_fu_305">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_channels_ch2_addr_gep_fu_121">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_channels_ch3_addr_gep_fu_167">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln139_fu_223">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_363">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln2_fu_383">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten_fu_80">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_1_fu_257">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln111_fu_192">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_channels_ch3_addr_gep_fu_128">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_channels_ch1_addr_gep_fu_153">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln134_fu_319">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_channels_ch2_addr_gep_fu_160">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln134_fu_313">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln132_fu_244">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln138_fu_219">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln118_fu_249">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln137_fu_215">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln118_1_fu_282">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln134_1_fu_301">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_cast_fu_293">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln139_1_fu_355">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln129_fu_235">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln137_fu_342">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_403">
+    <nodeIds>25</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="y_load_load_fu_241">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="U_scale_read_read_fu_102">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_width_read_1_read_fu_90">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_height_read_1_read_fu_84">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="x_load_load_fu_273">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten_load_load_fu_227">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln118_store_fu_328">
+    <nodeIds>77</nodeIds>
+  </ioNodes>
+  <ioNodes realName="V_scale_read_read_fu_96">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Y_scale_read_read_fu_108">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln129_store_fu_205">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln132_store_fu_268">
+    <nodeIds>78</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln129_store_fu_200">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln129_store_fu_210">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln129_store_fu_263">
+    <nodeIds>76</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="in_channels_ch1">
+    <nodeIds>60</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="in_channels_ch2">
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="in_channels_ch3">
+    <nodeIds>62</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_channels_ch1">
+    <nodeIds>70</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_channels_ch2">
+    <nodeIds>72</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="out_channels_ch3">
+    <nodeIds>74</nodeIds>
+  </memoryPorts>
+  <ioPorts name="U_scale">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_scale">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Y_scale">
+    <contents name="read">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_channels_ch1(p0)">
+    <contents name="load">
+      <nodeIds>60</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_channels_ch2(p0)">
+    <contents name="load">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_channels_ch3(p0)">
+    <contents name="load">
+      <nodeIds>62</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_height_read">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_width_read">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_channels_ch1(p0)">
+    <contents name="store">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_channels_ch2(p0)">
+    <contents name="store">
+      <nodeIds>72</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_channels_ch3(p0)">
+    <contents name="store">
+      <nodeIds>74</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>83</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>83</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="4" latency="4"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="3" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="25" stage="2" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="4"/>
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="60" stage="2" latency="2"/>
+      <operations id="61" stage="2" latency="2"/>
+      <operations id="62" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="60" stage="1" latency="2"/>
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="62" stage="1" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="yuv_scale" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="40009" mMaxLatency="2457609">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3" mMaxLatency="3">
+      <basicBlocks>30</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y" mII="1" mDepth="6" mMinTripCount="40000" mMaxTripCount="2457600" mMinLatency="40004" mMaxLatency="2457604" mType="1">
+      <basicBlocks>35</basicBlocks>
+      <basicBlocks>80</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>84</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

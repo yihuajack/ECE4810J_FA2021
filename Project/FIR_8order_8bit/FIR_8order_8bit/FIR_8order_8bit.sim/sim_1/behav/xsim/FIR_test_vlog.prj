@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FIR_8order_8bit.srcs/sources_1/new/FIR_top.v" \
+"../../../../FIR_8order_8bit.srcs/sources_1/new/multiplier.v" \
+"../../../../FIR_8order_8bit.srcs/sim_1/new/FIR_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

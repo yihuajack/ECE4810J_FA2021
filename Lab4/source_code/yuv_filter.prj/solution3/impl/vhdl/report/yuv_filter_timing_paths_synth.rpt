@@ -1,0 +1,626 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Tue Nov  2 13:33:32 2021
+| Host         : DESKTOP-R7BDQNG running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 10 -file ./report/yuv_filter_timing_paths_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+----------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.841ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[14]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.195ns  (logic 2.313ns (44.526%)  route 2.882ns (55.474%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     5.368 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[1]
+                         net (fo=1, unplaced)         0.800     6.168    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[14]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[14])
+                                                     -1.880     9.009    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.009    
+                         arrival time                          -6.168    
+  -------------------------------------------------------------------
+                         slack                                  2.841    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[15]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[15])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[16]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[16]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[16])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[17]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[17]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[17])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[18]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[18]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[18])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[19]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[19]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[19])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[20]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[20]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[20])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[21]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[21]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[21])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[22]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[22]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[22])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+Slack (MET) :             2.923ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[23]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.114ns  (logic 2.232ns (43.647%)  route 2.882ns (56.353%))
+  Logic Levels:           6  (CARRY4=3 LUT2=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.973     0.973    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/Q
+                         net (fo=6, unplaced)         0.997     2.488    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/Q[4]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.783 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     3.250    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11_n_9
+                         LUT2 (Prop_lut2_I0_O)        0.124     3.374 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3/O
+                         net (fo=1, unplaced)         0.000     3.374    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_3_n_0
+                         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     3.726 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1/O[3]
+                         net (fo=1, unplaced)         0.618     4.344    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/sub_ln59_1_fu_411_p2[10]
+                         LUT2 (Prop_lut2_I1_O)        0.307     4.651 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__1_i_2/O
+                         net (fo=1, unplaced)         0.000     4.651    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8_n_26
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     5.031 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.031    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.287 r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2/O[2]
+                         net (fo=33, unplaced)        0.800     6.087    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/C[15]
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[23]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=928, unset)          0.924    10.924    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/ap_clk
+                         DSP48E1                                      r  bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         DSP48E1 (Setup_dsp48e1_CLK_C[23])
+                                                     -1.879     9.010    bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                          9.010    
+                         arrival time                          -6.087    
+  -------------------------------------------------------------------
+                         slack                                  2.923    
+
+
+
+

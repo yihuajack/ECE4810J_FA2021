@@ -1,0 +1,16 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Novelty}{3}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Main Approach}{4}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Evaluation}{5}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Limitations}{7}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Reference}{8}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Thanks}{9}{0}{7}

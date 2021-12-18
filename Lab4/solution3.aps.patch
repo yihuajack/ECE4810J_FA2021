@@ -1,0 +1,27 @@
+8,12d7
+<     <synthesis askAgain="true"/>
+<     <config>
+<         <config_dataflow default_channel="fifo" scalar_fifo_depth="0" start_fifo_depth="0"/>
+<         <config_export rtl="vhdl"/>
+<     </config>
+14c9
+<         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+---
+>         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+44,45c39,40
+<     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="false" rtlCombo="verilog">
+<         <Format formatName="ip_catalog"/>
+---
+>     <ExportDesign askAgain="true" evaluate="true" flow="true" flowChoice="impl" formatName="ip_catalog" rtl="vhdl" rtlButton="true" rtlCombo="vhdl">
+>         <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
+50d44
+<         <Format formatName="xo"/>
+53c47
+<         <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="false" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">
+---
+>         <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">
+58a53,56
+>     <config>
+>         <config_dataflow default_channel="fifo" fifo_depth="2" scalar_fifo_depth="0" start_fifo_depth="0" strict_mode="warning"/>
+>         <config_export format="ip_catalog" rtl="vhdl"/>
+>     </config>

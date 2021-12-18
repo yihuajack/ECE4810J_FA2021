@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sim_1/new/FIR_test.v,1639053845,verilog,,,,FIR_test,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd,1639068606,vhdl,,,,mult_gen_0,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_1/sim/mult_gen_1.vhd,1639069261,vhdl,,,,mult_gen_1,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_2/sim/mult_gen_2.vhd,1639068852,vhdl,,,,mult_gen_2,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_3/sim/mult_gen_3.vhd,1639069808,vhdl,,,,mult_gen_3,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_4/sim/mult_gen_4.vhd,1639069885,vhdl,,,,mult_gen_4,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/new/FIR_top.v,1639071558,verilog,,C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sim_1/new/FIR_test.v,,FIR_top,,,,,,,,
+C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/new/multiplier.v,1639052790,verilog,,C:/Vivado_project/ECE481/Project/FIR_8order_8bit_sys_WallaceTree/FIR_8order_8bit_sys_WallaceTree.srcs/sim_1/new/FIR_test.v,,multiplier,,,,,,,,

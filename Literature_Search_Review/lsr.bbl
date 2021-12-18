@@ -1,0 +1,105 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{tambe2021edgebert}{misc}{}
+    \name{author}{11}{}{%
+      {{hash=TT}{%
+         family={Tambe},
+         familyi={T\bibinitperiod},
+         given={Thierry},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hooper},
+         familyi={H\bibinitperiod},
+         given={Coleman},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pentecost},
+         familyi={P\bibinitperiod},
+         given={Lillian},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jia},
+         familyi={J\bibinitperiod},
+         given={Tianyu},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=YEY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={En-Yu},
+         giveni={E\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Donato},
+         familyi={D\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Sanh},
+         familyi={S\bibinitperiod},
+         given={Victor},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=WPN}{%
+         family={Whatmough},
+         familyi={W\bibinitperiod},
+         given={Paul\bibnamedelima N.},
+         giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=RAM}{%
+         family={Rush},
+         familyi={R\bibinitperiod},
+         given={Alexander\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Brooks},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WGY}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Gu-Yeon},
+         giveni={G\bibinithyphendelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TT+1}
+    \strng{fullhash}{TTHCPLJTYEYDMSVWPNRAMBDWGY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{eprint}
+    \verb 2011.14203
+    \endverb
+    \field{title}{EdgeBERT: Sentence-Level Energy Optimizations for
+  Latency-Aware Multi-Task NLP Inference}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.AR}
+    \field{year}{2021}
+  \endentry
+\enddatalist
+\endinput

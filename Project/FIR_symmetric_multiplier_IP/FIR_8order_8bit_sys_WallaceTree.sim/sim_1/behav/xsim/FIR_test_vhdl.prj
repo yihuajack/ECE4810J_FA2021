@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_4/sim/mult_gen_4.vhd" \
+"../../../../FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_3/sim/mult_gen_3.vhd" \
+"../../../../FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_2/sim/mult_gen_2.vhd" \
+"../../../../FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_1/sim/mult_gen_1.vhd" \
+"../../../../FIR_8order_8bit_sys_WallaceTree.srcs/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
+
+# Do not sort compile order
+nosort

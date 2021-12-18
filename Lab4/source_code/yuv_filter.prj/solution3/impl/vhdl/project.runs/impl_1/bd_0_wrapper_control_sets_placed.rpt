@@ -1,0 +1,107 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Tue Nov  2 13:34:27 2021
+| Host         : DESKTOP-R7BDQNG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    29 |
+|    Minimum number of control sets                        |    29 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    29 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    20 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           18 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              32 |           11 |
+| Yes          | No                    | No                     |             537 |          126 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             261 |           77 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                                                 Enable Signal                                                                |                                                                Set/Reset Signal                                                               | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      | bd_0_i/hls_inst/U0/p_scale_height_U/E[0]                                                                                                     | ap_rst                                                                                                                                        |                1 |              4 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/internal_full_n_reg[0]                                                                                       | ap_rst                                                                                                                                        |                1 |              4 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/p_scale_channels_ch1_U/ap_block_pp0_stage0_subdone                                                                        | ap_rst                                                                                                                                        |                1 |              5 |         5.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/E[0]                                              | ap_rst                                                                                                                                        |                2 |              6 |         3.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/E[0]                                          | ap_rst                                                                                                                                        |                2 |              6 |         3.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/p_yuv_channels_ch1_U/ap_block_pp0_stage0_subdone                                                                          | ap_rst                                                                                                                                        |                2 |              7 |         3.50 |
+|  ap_clk      | bd_0_i/hls_inst/U0/start_for_yuv_scale_U0_U/E[0]                                                                                             | ap_rst                                                                                                                                        |                3 |              9 |         3.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/x_fu_118                                          | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U/SR[0]     |                4 |             14 |         3.50 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/x_fu_124[0]_i_1_n_0                               | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U/clear     |                4 |             14 |         3.50 |
+|  ap_clk      | bd_0_i/hls_inst/U0/p_scale_channels_ch1_U/ap_block_pp0_stage0_subdone                                                                        | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/select_ln72_reg_694[15]_i_1_n_0                    |                4 |             16 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/select_ln34_reg_616[15]_i_2_n_0                   | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/select_ln34_reg_616[15]_i_1_n_0                    |                4 |             16 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/y_fu_120                                          | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U/clear     |                5 |             16 |         3.20 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/Q[0]                                                                                                         |                                                                                                                                               |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/start_for_yuv_scale_U0_U/ce                                                                                               |                                                                                                                                               |                3 |             24 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/ap_CS_fsm_reg[5]                              |                                                                                                                                               |                7 |             24 |         3.43 |
+|  ap_clk      |                                                                                                                                              | ap_rst                                                                                                                                        |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/ap_CS_fsm_state4                                                                                             |                                                                                                                                               |                9 |             32 |         3.56 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/indvar_flatten_fu_128[31]_i_2_n_0                 | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U/SR[0]     |                9 |             32 |         3.56 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/ap_CS_fsm_reg_n_0_[3]                                                                                        |                                                                                                                                               |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv2rgb_1_U0/ap_CS_fsm_reg[0]_0                                                                                           | ap_rst                                                                                                                                        |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/flow_control_loop_pipe_sequential_init_U/E[0] | bd_0_i/hls_inst/U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/flow_control_loop_pipe_sequential_init_U/SR[0] |                9 |             32 |         3.56 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/ap_CS_fsm_state4                                                                                             |                                                                                                                                               |                6 |             32 |         5.33 |
+|  ap_clk      |                                                                                                                                              |                                                                                                                                               |               18 |             42 |         2.33 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/ce                                                |                                                                                                                                               |               14 |             48 |         3.43 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/y_2_fu_114[15]_i_2_n_0                            | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U/SR[0]     |               13 |             48 |         3.69 |
+|  ap_clk      | bd_0_i/hls_inst/U0/rgb2yuv_1_U0/ce_0                                                                                                         |                                                                                                                                               |               10 |             64 |         6.40 |
+|  ap_clk      | bd_0_i/hls_inst/U0/yuv_scale_U0/ce_0                                                                                                         |                                                                                                                                               |               16 |             64 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/U0/p_scale_channels_ch1_U/ap_block_pp0_stage0_subdone                                                                        |                                                                                                                                               |               17 |             95 |         5.59 |
+|  ap_clk      | bd_0_i/hls_inst/U0/p_yuv_channels_ch1_U/ap_block_pp0_stage0_subdone                                                                          |                                                                                                                                               |               33 |            148 |         4.48 |
++--------------+----------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

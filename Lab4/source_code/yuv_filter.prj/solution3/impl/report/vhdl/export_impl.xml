@@ -1,0 +1,297 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>impl</RUN_TYPE>
+    <VIVADO_VERSION>v.2021.1.1</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>7.394</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>7.394</CP_FINAL>
+    <CP_ROUTE>7.394</CP_ROUTE>
+    <CP_SYNTH>7.159</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>2.606</SLACK_FINAL>
+    <SLACK_ROUTE>2.606</SLACK_ROUTE>
+    <SLACK_SYNTH>2.841</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>0.000</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>2.606</WNS_FINAL>
+    <WNS_ROUTE>2.606</WNS_ROUTE>
+    <WNS_SYNTH>2.841</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>15</DSP>
+      <FF>872</FF>
+      <LATCH>0</LATCH>
+      <LUT>632</LUT>
+      <SLICE>281</SLICE>
+      <SRL>22</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <SLICE>13300</SLICE>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="U0" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="yuv_filter" DISPNAME="U0" RTLNAME="yuv_filter">
+      <SubModules count="19">U_scale_c_U V_scale_c_U Y_scale_c_U entry_proc_U0 p_scale_channels_ch1_U p_scale_channels_ch2_U p_scale_channels_ch3_U p_scale_height_U p_scale_width_U p_yuv_channels_ch1_U p_yuv_channels_ch2_U p_yuv_channels_ch3_U p_yuv_height_U p_yuv_width_U rgb2yuv_1_U0 start_for_yuv2rgb_1_U0_U start_for_yuv_scale_U0_U yuv2rgb_1_U0 yuv_scale_U0</SubModules>
+      <Resources DSP="15" FF="872" LUT="632"/>
+      <LocalResources FF="2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/U_scale_c_U" BINDMODULE="yuv_filter_fifo_w8_d3_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d3_S" DISPNAME="U_scale_c_U" RTLNAME="yuv_filter_fifo_w8_d3_S">
+      <Resources FF="5" LUT="10"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="U_scale_c_U" SOURCE="" URAM="0" VARIABLE="U_scale_c"/>
+    </RtlModule>
+    <RtlModule CELL="U0/V_scale_c_U" BINDMODULE="yuv_filter_fifo_w8_d3_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d3_S" DISPNAME="V_scale_c_U" RTLNAME="yuv_filter_fifo_w8_d3_S">
+      <Resources FF="5" LUT="11"/>
+      <LocalResources FF="5" LUT="6"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="V_scale_c_U" SOURCE="" URAM="0" VARIABLE="V_scale_c"/>
+    </RtlModule>
+    <RtlModule CELL="U0/Y_scale_c_U" BINDMODULE="yuv_filter_fifo_w8_d3_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d3_S" DISPNAME="Y_scale_c_U" RTLNAME="yuv_filter_fifo_w8_d3_S">
+      <Resources FF="5" LUT="10"/>
+      <LocalResources FF="5" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="Y_scale_c_U" SOURCE="" URAM="0" VARIABLE="Y_scale_c"/>
+    </RtlModule>
+    <RtlModule CELL="U0/entry_proc_U0" DEPTH="1" TYPE="function" MODULENAME="entry_proc" DISPNAME="entry_proc_U0" RTLNAME="yuv_filter_entry_proc">
+      <Resources FF="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_scale_channels_ch1_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_scale_channels_ch1_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="12" LUT="15"/>
+      <LocalResources FF="4" LUT="5"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_scale_channels_ch1_U" SOURCE="yuv_filter.c:18" URAM="0" VARIABLE="p_scale_channels_ch1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_scale_channels_ch2_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_scale_channels_ch2_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="12" LUT="11"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_scale_channels_ch2_U" SOURCE="yuv_filter.c:18" URAM="0" VARIABLE="p_scale_channels_ch2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_scale_channels_ch3_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_scale_channels_ch3_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="12" LUT="11"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_scale_channels_ch3_U" SOURCE="yuv_filter.c:18" URAM="0" VARIABLE="p_scale_channels_ch3"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_scale_height_U" BINDMODULE="yuv_filter_fifo_w16_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w16_d2_S" DISPNAME="p_scale_height_U" RTLNAME="yuv_filter_fifo_w16_d2_S">
+      <Resources FF="36" LUT="36"/>
+      <LocalResources FF="4" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_scale_height_U" SOURCE="yuv_filter.c:18" URAM="0" VARIABLE="p_scale_height"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_scale_width_U" BINDMODULE="yuv_filter_fifo_w16_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w16_d2_S" DISPNAME="p_scale_width_U" RTLNAME="yuv_filter_fifo_w16_d2_S">
+      <Resources FF="36" LUT="35"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_scale_width_U" SOURCE="yuv_filter.c:18" URAM="0" VARIABLE="p_scale_width"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_yuv_channels_ch1_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_yuv_channels_ch1_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="20" LUT="12"/>
+      <LocalResources FF="4" LUT="4"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_yuv_channels_ch1_U" SOURCE="yuv_filter.c:17" URAM="0" VARIABLE="p_yuv_channels_ch1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_yuv_channels_ch2_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_yuv_channels_ch2_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="20" LUT="11"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_yuv_channels_ch2_U" SOURCE="yuv_filter.c:17" URAM="0" VARIABLE="p_yuv_channels_ch2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_yuv_channels_ch3_U" BINDMODULE="yuv_filter_fifo_w8_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w8_d2_S" DISPNAME="p_yuv_channels_ch3_U" RTLNAME="yuv_filter_fifo_w8_d2_S">
+      <Resources FF="20" LUT="11"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_yuv_channels_ch3_U" SOURCE="yuv_filter.c:17" URAM="0" VARIABLE="p_yuv_channels_ch3"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_yuv_height_U" BINDMODULE="yuv_filter_fifo_w16_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w16_d2_S" DISPNAME="p_yuv_height_U" RTLNAME="yuv_filter_fifo_w16_d2_S">
+      <Resources FF="36" LUT="19"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_yuv_height_U" SOURCE="yuv_filter.c:17" URAM="0" VARIABLE="p_yuv_height"/>
+    </RtlModule>
+    <RtlModule CELL="U0/p_yuv_width_U" BINDMODULE="yuv_filter_fifo_w16_d2_S" DEPTH="1" TYPE="resource" MODULENAME="fifo_w16_d2_S" DISPNAME="p_yuv_width_U" RTLNAME="yuv_filter_fifo_w16_d2_S">
+      <Resources FF="36" LUT="20"/>
+      <LocalResources FF="4" LUT="3"/>
+      <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="p_yuv_width_U" SOURCE="yuv_filter.c:17" URAM="0" VARIABLE="p_yuv_width"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0" DEPTH="1" TYPE="function" MODULENAME="rgb2yuv_1" DISPNAME="rgb2yuv_1_U0" RTLNAME="yuv_filter_rgb2yuv_1">
+      <SubModules count="2">grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72 mul_mul_16ns_16ns_32_4_1_U25</SubModules>
+      <Resources DSP="6" FF="268" LUT="148"/>
+      <LocalResources FF="39" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72" DEPTH="2" TYPE="function" MODULENAME="rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y" DISPNAME="grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72" RTLNAME="yuv_filter_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y">
+      <SubModules count="6">flow_control_loop_pipe_sequential_init_U mac_muladd_8ns_5ns_8ns_13_4_1_U9 mac_muladd_8ns_7ns_8ns_15_4_1_U8 mac_muladd_8ns_7s_8ns_15_4_1_U7 mac_muladd_8ns_8s_15s_16_4_1_U10 mac_muladd_8ns_8s_16s_16_4_1_U11</SubModules>
+      <Resources DSP="5" FF="229" LUT="144"/>
+      <LocalResources FF="227" LUT="106"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U" BINDMODULE="yuv_filter_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="yuv_filter_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="8"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_5ns_8ns_13_4_1_U9" BINDMODULE="yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8ns_5ns_8ns_13_4_1" DISPNAME="mac_muladd_8ns_5ns_8ns_13_4_1_U9" RTLNAME="yuv_filter_mac_muladd_8ns_5ns_8ns_13_4_1">
+      <Resources DSP="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8" BINDMODULE="yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8ns_7ns_8ns_15_4_1" DISPNAME="mac_muladd_8ns_7ns_8ns_15_4_1_U8" RTLNAME="yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1">
+      <Resources DSP="1" LUT="15"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7s_8ns_15_4_1_U7" BINDMODULE="yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8ns_7s_8ns_15_4_1" DISPNAME="mac_muladd_8ns_7s_8ns_15_4_1_U7" RTLNAME="yuv_filter_mac_muladd_8ns_7s_8ns_15_4_1">
+      <Resources DSP="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_15s_16_4_1_U10" BINDMODULE="yuv_filter_mac_muladd_8ns_8s_15s_16_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8ns_8s_15s_16_4_1" DISPNAME="mac_muladd_8ns_8s_15s_16_4_1_U10" RTLNAME="yuv_filter_mac_muladd_8ns_8s_15s_16_4_1">
+      <Resources DSP="1" LUT="13"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11" BINDMODULE="yuv_filter_mac_muladd_8ns_8s_16s_16_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8ns_8s_16s_16_4_1" DISPNAME="mac_muladd_8ns_8s_16s_16_4_1_U11" RTLNAME="yuv_filter_mac_muladd_8ns_8s_16s_16_4_1">
+      <Resources DSP="1" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/rgb2yuv_1_U0/mul_mul_16ns_16ns_32_4_1_U25" BINDMODULE="yuv_filter_mul_mul_16ns_16ns_32_4_1" DEPTH="2" TYPE="rtl" MODULENAME="mul_mul_16ns_16ns_32_4_1" DISPNAME="mul_mul_16ns_16ns_32_4_1_U25" RTLNAME="yuv_filter_mul_mul_16ns_16ns_32_4_1">
+      <Resources DSP="1" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/start_for_yuv2rgb_1_U0_U" BINDMODULE="yuv_filter_start_for_yuv2rgb_1_U0" DEPTH="1" TYPE="rtl" MODULENAME="start_for_yuv2rgb_1_U0" DISPNAME="start_for_yuv2rgb_1_U0_U" RTLNAME="yuv_filter_start_for_yuv2rgb_1_U0">
+      <Resources FF="4" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="U0/start_for_yuv_scale_U0_U" BINDMODULE="yuv_filter_start_for_yuv_scale_U0" DEPTH="1" TYPE="rtl" MODULENAME="start_for_yuv_scale_U0" DISPNAME="start_for_yuv_scale_U0_U" RTLNAME="yuv_filter_start_for_yuv_scale_U0">
+      <Resources FF="4" LUT="10"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0" DEPTH="1" TYPE="function" MODULENAME="yuv2rgb_1" DISPNAME="yuv2rgb_1_U0" RTLNAME="yuv_filter_yuv2rgb_1">
+      <SubModules count="2">grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72 mul_mul_16ns_16ns_32_4_1_U81</SubModules>
+      <Resources DSP="5" FF="259" LUT="188"/>
+      <LocalResources FF="87" LUT="2"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72" DEPTH="2" TYPE="function" MODULENAME="yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y" DISPNAME="grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72" RTLNAME="yuv_filter_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y">
+      <SubModules count="5">flow_control_loop_pipe_sequential_init_U mac_muladd_8s_8s_17s_17_4_1_U67 mac_muladd_8s_9ns_18s_18_4_1_U68 mac_muladd_9s_9ns_8ns_18_4_1_U66 mul_8s_9s_17_1_1_U65</SubModules>
+      <Resources DSP="4" FF="172" LUT="185"/>
+      <LocalResources FF="170" LUT="74"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/flow_control_loop_pipe_sequential_init_U" BINDMODULE="yuv_filter_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="yuv_filter_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="64"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mac_muladd_8s_8s_17s_17_4_1_U67" BINDMODULE="yuv_filter_mac_muladd_8s_8s_17s_17_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8s_8s_17s_17_4_1" DISPNAME="mac_muladd_8s_8s_17s_17_4_1_U67" RTLNAME="yuv_filter_mac_muladd_8s_8s_17s_17_4_1">
+      <Resources DSP="1" LUT="16"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mac_muladd_8s_9ns_18s_18_4_1_U68" BINDMODULE="yuv_filter_mac_muladd_8s_9ns_18s_18_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_8s_9ns_18s_18_4_1" DISPNAME="mac_muladd_8s_9ns_18s_18_4_1_U68" RTLNAME="yuv_filter_mac_muladd_8s_9ns_18s_18_4_1">
+      <Resources DSP="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mac_muladd_9s_9ns_8ns_18_4_1_U66" BINDMODULE="yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1" DEPTH="3" TYPE="rtl" MODULENAME="mac_muladd_9s_9ns_8ns_18_4_1" DISPNAME="mac_muladd_9s_9ns_8ns_18_4_1_U66" RTLNAME="yuv_filter_mac_muladd_9s_9ns_8ns_18_4_1">
+      <Resources DSP="1" LUT="32"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/grp_yuv2rgb_1_Pipeline_YUV2RGB_LOOP_X_YUV2RGB_LOOP_Y_fu_72/mul_8s_9s_17_1_1_U65" BINDMODULE="yuv_filter_mul_8s_9s_17_1_1" DEPTH="3" TYPE="rtl" MODULENAME="mul_8s_9s_17_1_1" DISPNAME="mul_8s_9s_17_1_1_U65" RTLNAME="yuv_filter_mul_8s_9s_17_1_1">
+      <Resources DSP="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv2rgb_1_U0/mul_mul_16ns_16ns_32_4_1_U81" BINDMODULE="yuv_filter_mul_mul_16ns_16ns_32_4_1" DEPTH="2" TYPE="rtl" MODULENAME="mul_mul_16ns_16ns_32_4_1" DISPNAME="mul_mul_16ns_16ns_32_4_1_U81" RTLNAME="yuv_filter_mul_mul_16ns_16ns_32_4_1">
+      <Resources DSP="1" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv_scale_U0" DEPTH="1" TYPE="function" MODULENAME="yuv_scale" DISPNAME="yuv_scale_U0" RTLNAME="yuv_filter_yuv_scale">
+      <SubModules count="2">grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94 mul_mul_16ns_16ns_32_4_1_U51</SubModules>
+      <Resources DSP="4" FF="79" LUT="75"/>
+      <LocalResources FF="40" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94" DEPTH="2" TYPE="function" MODULENAME="yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y" DISPNAME="grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94" RTLNAME="yuv_filter_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources DSP="3" FF="39" LUT="68"/>
+      <LocalResources DSP="3" FF="37" LUT="5"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv_scale_U0/grp_yuv_scale_Pipeline_YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y_fu_94/flow_control_loop_pipe_sequential_init_U" BINDMODULE="yuv_filter_flow_control_loop_pipe_sequential_init" DEPTH="3" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="yuv_filter_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="63"/>
+    </RtlModule>
+    <RtlModule CELL="U0/yuv_scale_U0/mul_mul_16ns_16ns_32_4_1_U51" BINDMODULE="yuv_filter_mul_mul_16ns_16ns_32_4_1" DEPTH="2" TYPE="resource" MODULENAME="mul_mul_16ns_16ns_32_4_1" DISPNAME="mul_mul_16ns_16ns_32_4_1_U51" RTLNAME="yuv_filter_mul_mul_16ns_16ns_32_4_1">
+      <Resources DSP="1" LUT="2"/>
+      <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_mul_16ns_16ns_32_4_1_U51" SOURCE="yuv_filter.c:123" URAM="0" VARIABLE="bound"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="5.432" DATAPATH_LOGIC_DELAY="2.169" DATAPATH_NET_DELAY="3.263" ENDPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[24]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.606" STARTPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C">
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="638"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__2_i_2" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="39"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.431" DATAPATH_LOGIC_DELAY="2.169" DATAPATH_NET_DELAY="3.262" ENDPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[22]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.607" STARTPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C">
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="638"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__2_i_2" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="39"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.383" DATAPATH_LOGIC_DELAY="2.169" DATAPATH_NET_DELAY="3.214" ENDPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[40]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.655" STARTPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C">
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="638"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__2_i_2" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="39"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.382" DATAPATH_LOGIC_DELAY="2.169" DATAPATH_NET_DELAY="3.213" ENDPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[41]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.656" STARTPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C">
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="638"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__2_i_2" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="39"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.349" DATAPATH_LOGIC_DELAY="2.169" DATAPATH_NET_DELAY="3.180" ENDPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg/C[17]" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.689" STARTPOINT_PIN="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]/C">
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/B_reg_665_pp0_iter6_reg_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="638"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/sub_ln59_1_fu_411_p2_carry__1_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/sub_ln59_1_fu_411_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_7ns_8ns_15_4_1_U8/yuv_filter_mac_muladd_8ns_7ns_8ns_15_4_1_DSP48_1_U/grp_fu_567_p2_carry__2_i_2" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="12"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/grp_fu_567_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="853"/>
+      <CELL NAME="rgb2yuv_1_U0/grp_rgb2yuv_1_Pipeline_RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y_fu_72/mac_muladd_8ns_8s_16s_16_4_1_U11/yuv_filter_mac_muladd_8ns_8s_16s_16_4_1_DSP48_4_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="39"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="vhdl/report/yuv_filter_design_analysis_routed.rpt"/>
+    <ReportFile TYPE="failfast" PATH="vhdl/report/yuv_filter_failfast_routed.rpt"/>
+    <ReportFile TYPE="status" PATH="vhdl/report/yuv_filter_status_routed.rpt"/>
+    <ReportFile TYPE="timing" PATH="vhdl/report/yuv_filter_timing_routed.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="vhdl/report/yuv_filter_timing_paths_routed.rpt"/>
+    <ReportFile TYPE="utilization" PATH="vhdl/report/yuv_filter_utilization_routed.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="vhdl/report/yuv_filter_utilization_hierarchical_routed.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Tue Nov 02 13:35:08 +0800 2021"/>
+    <item NAME="Version" VALUE="2021.1 (Build 3286242 on Wed Jul 28 13:10:47 MDT 2021)"/>
+    <item NAME="Project" VALUE="yuv_filter.prj"/>
+    <item NAME="Solution" VALUE="solution3 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg400-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="Place &amp; Route target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Impl NAME="Place &amp; Route Options">
+      <item NAME="config_export -vivado_impl_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_phys_opt" VALUE="none"/>
+      <item NAME="config_export -vivado_pblock" VALUE=""/>
+    </Impl>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

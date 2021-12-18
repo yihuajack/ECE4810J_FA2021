@@ -1,0 +1,60 @@
+Starting Export RTL/Implementation ...
+F:/Xilinx/Vitis_HLS/2021.1/bin/vitis_hls.bat D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/export.tcl
+INFO: [HLS 200-10] Running 'F:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Yihua' on host 'desktop-r7bdqng' (Windows NT_amd64 version 6.2) on Tue Nov 02 12:28:43 +0800 2021
+INFO: [HLS 200-10] In directory 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code'
+Sourcing Tcl script 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3/export.tcl'
+INFO: [HLS 200-1510] Running: open_project yuv_filter.prj 
+INFO: [HLS 200-10] Opening project 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj'.
+INFO: [HLS 200-1510] Running: set_top yuv_filter 
+INFO: [HLS 200-1510] Running: add_files yuv_filter.c 
+INFO: [HLS 200-10] Adding design file 'yuv_filter.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test_data -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test_data' to the project
+INFO: [HLS 200-1510] Running: add_files -tb yuv_filter_test.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'yuv_filter_test.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb image_aux.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'image_aux.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution3 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/Documents/GitHub/ECE4810J_FA2021/Lab4/source_code/yuv_filter.prj/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_dataflow -default_channel=fifo
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -scalar_fifo_depth=0
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -start_fifo_depth=0
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_dataflow -default_channel fifo -scalar_fifo_depth 0 -start_fifo_depth 0 
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1510] Running: config_export -rtl vhdl 
+INFO: [HLS 200-1510] Running: set_directive_top -name yuv_filter yuv_filter 
+INFO: [HLS 200-1510] Running: set_directive_inline -off yuv_scale 
+INFO: [HLS 200-1510] Running: set_directive_pipeline yuv_scale/YUV_SCALE_LOOP_Y 
+INFO: [HLS 200-1510] Running: set_directive_pipeline rgb2yuv/RGB2YUV_LOOP_Y 
+INFO: [HLS 200-1510] Running: set_directive_pipeline yuv2rgb/YUV2RGB_LOOP_Y 
+INFO: [HLS 200-1510] Running: set_directive_dataflow yuv_filter 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off rgb2yuv 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off yuv2rgb 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off yuv_scale 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output D:/Documents/GitHub/ECE4810J_FA2021/Lab4/yuv_filter.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  2 12:29:05 2021...
+INFO: [HLS 200-802] Generated output file D:/Documents/GitHub/ECE4810J_FA2021/Lab4/yuv_filter.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 18.518 seconds; current allocated memory: 316.162 MB.
+Finished Export RTL/Implementation.

@@ -1,0 +1,31 @@
+INFO: [HLS 200-10] Running 'F:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Yihua' on host 'desktop-r7bdqng' (Windows NT_amd64 version 6.2) on Tue Nov 02 00:17:16 +0800 2021
+INFO: [HLS 200-10] In directory 'D:/Documents/Programming/Xilinx_Vitis_HLS'
+Sourcing Tcl script 'tmp_script.tcl'
+INFO: [HLS 200-1510] Running: open_project -upgrade yuv_filter.prj 
+INFO: [HLS 200-1460] Upgrading and opening project 'D:/Documents/Programming/Xilinx_Vitis_HLS/yuv_filter.prj'
+INFO: [HLS 200-1463] Upgrading solution 'solution1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1463] Upgrading solution 'solution2'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1463] Upgrading solution 'solution3'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_dataflow -default_channel=fifo
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -fifo_depth=2
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -scalar_fifo_depth=0
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -start_fifo_depth=0
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -strict_mode=warning
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
